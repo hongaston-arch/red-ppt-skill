@@ -4,6 +4,8 @@
 
 [English](README.en.md) · [使用入口](SKILL.md) · [风格包契约](docs/style-packs.md) · [维护流程](docs/maintenance.md)
 
+新聊天先读 [CONTEXT.md](CONTEXT.md)。风格确定按 [确认流程](docs/style-confirmation.md) 执行；[Swiss定义卡 draft-01](styles/swiss/spec.md) 已记录来源规则、冲突与待确认项，尚未获得方向或样张批准。有规格的风格会在生成目录保存规格快照，便于后续聊天核对创作依据。
+
 ## 当前状态
 
 首批基础改造：登记原有两种风格，提供初始化与校验命令。模板和演讲者运行时沿用上游，尚未提取共享源，也尚未新增第三种风格。工作分支需经 PR 验证后合并到 main。

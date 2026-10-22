@@ -4,6 +4,8 @@ A multi-style HTML presentation skill forked from [Guizang PPT Skill](https://gi
 
 [中文](README.md) · [Style package contract](docs/style-packs.md) · [Maintenance](docs/maintenance.md)
 
+For a new chat, start with [CONTEXT.md](CONTEXT.md). The [confirmation workflow](docs/style-confirmation.md) and [Swiss draft specification](styles/swiss/spec.md) distinguish inherited rules, proposals, user decisions, and verification. Direction and sample approval are still pending. Styles with a registered specification preserve a checksummed snapshot in each new deck.
+
 ## Current scope
 
 This foundation registers the inherited `magazine` and `swiss` styles and adds scaffolding and validation commands. The original templates and presenter runtime remain unchanged. Shared runtime source extraction and a third style are future work, not completed features.

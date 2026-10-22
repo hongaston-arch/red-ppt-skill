@@ -4,6 +4,7 @@ import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, renameS
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { getStyle, loadStyles, resource, skillRoot } from '../scripts/lib/styles.mjs';
 import { scaffold } from '../scripts/lib/scaffold.mjs';
 
@@ -145,6 +146,45 @@ test('metadata prevents validating a deck with the wrong style', t => {
   const result = run('validate-deck.mjs', ['--style', 'swiss', file]);
   assert.notEqual(result.status, 0);
   assert.match(result.stderr, /does not match/);
+});
+
+test('specification and revision must be registered together with a real file', t => {
+  const f = fixture(t);
+  f.style.spec = 'styles/magazine/guide.md'; f.save();
+  assert.throws(() => loadStyles(f.root), /specRevision/);
+  f.style.specRevision = 'draft-01'; f.save();
+  assert.equal(getStyle('magazine', f.root).specRevision, 'draft-01');
+  f.style.spec = 'missing-spec.md'; f.save();
+  assert.throws(() => loadStyles(f.root), /ENOENT/);
+});
+
+test('a deck preserves its specification when the source specification changes', t => {
+  const f = fixture(t);
+  f.style.spec = 'styles/magazine/guide.md'; f.style.specRevision = 'draft-01'; f.save();
+  const source = readFileSync(join(f.root, f.style.spec), 'utf8');
+  const output = join(temp(t), 'deck');
+  scaffold({ styleId: 'magazine', title: 'Test', output, root: f.root });
+  writeFileSync(join(f.root, f.style.spec), 'A later source revision');
+  assert.equal(readFileSync(join(output, 'style-spec.md'), 'utf8'), source);
+  const metadata = JSON.parse(readFileSync(join(output, 'red-deck.json'), 'utf8'));
+  assert.equal(metadata.styleSpec.revision, 'draft-01');
+  assert.equal(metadata.styleSpec.sha256, createHash('sha256').update(source).digest('hex'));
+});
+
+test('final validation rejects a modified specification snapshot', t => {
+  const file = completedMagazine(t), dir = dirname(file);
+  writeFileSync(join(dir, 'style-spec.md'), 'original specification');
+  const metadataFile = join(dir, 'red-deck.json');
+  const metadata = JSON.parse(readFileSync(metadataFile, 'utf8'));
+  metadata.styleSpec = { path: 'style-spec.md', revision: 'draft-01',
+    sha256: createHash('sha256').update('original specification').digest('hex') };
+  writeFileSync(metadataFile, JSON.stringify(metadata));
+  const valid = run('validate-deck.mjs', ['--style', 'magazine', file]);
+  assert.equal(valid.status, 0, valid.stdout + valid.stderr);
+  writeFileSync(join(dir, 'style-spec.md'), 'changed specification');
+  const invalid = run('validate-deck.mjs', ['--style', 'magazine', file]);
+  assert.notEqual(invalid.status, 0);
+  assert.match(invalid.stderr, /checksum/);
 });
 
 test('commented slides and slide-number class are not treated as authored pages', t => {

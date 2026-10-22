@@ -34,6 +34,12 @@ export function loadStyles(root = skillRoot) {
     if (!['stable', 'experimental'].includes(style.status)) throw new Error(`${manifest}: invalid status.`);
     if (style.runtime !== 'guizang-presenter-v1') throw new Error(`${manifest}: unsupported runtime.`);
     for (const field of ['template', 'guide', 'layouts', 'themes']) resource(root, style[field]);
+    if (style.spec !== undefined || style.specRevision !== undefined) {
+      resource(root, style.spec);
+      if (typeof style.specRevision !== 'string' || !/^[a-z0-9]+(?:[.-][a-z0-9]+)*$/.test(style.specRevision)) {
+        throw new Error(`${manifest}: specRevision is required with spec and must be a revision slug.`);
+      }
+    }
     if (!style.template.endsWith('.html')) throw new Error(`${manifest}: template must be HTML.`);
     for (const field of ['rules', 'assets', 'validators']) {
       if (!Array.isArray(style[field])) throw new Error(`${manifest}: ${field} must be an array.`);

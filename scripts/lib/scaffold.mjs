@@ -1,5 +1,6 @@
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
+import { createHash } from 'node:crypto';
 import { getStyle, resource, skillRoot } from './styles.mjs';
 
 const escapeHtml = value => value.replace(/[&<>"']/g, character => ({
@@ -10,6 +11,7 @@ export function scaffold({ styleId, title, output, root = skillRoot }) {
   if (typeof title !== 'string' || !title.trim()) throw new Error('A non-empty --title is required.');
   if (typeof output !== 'string' || !output.trim()) throw new Error('An output directory is required.');
   const style = getStyle(styleId, root);
+  const spec = style.spec ? readFileSync(resource(root, style.spec), 'utf8') : null;
   const template = readFileSync(resource(root, style.template), 'utf8');
   if ((template.match(/<title\b[^>]*>[\s\S]*?<\/title>/gi) || []).length !== 1) {
     throw new Error('Template must have exactly one title element.');
@@ -26,9 +28,14 @@ export function scaffold({ styleId, title, output, root = skillRoot }) {
     copyFileSync(resource(root, asset), destination);
   }
   writeFileSync(join(target, 'index.html'), html, { flag: 'wx' });
+  if (spec !== null) writeFileSync(join(target, 'style-spec.md'), spec, { flag: 'wx' });
   writeFileSync(join(target, 'red-deck.json'), `${JSON.stringify({
     schemaVersion: 1, style: style.id, runtime: style.runtime, title,
     template: style.template,
+    ...(spec !== null ? { styleSpec: {
+      source: style.spec, revision: style.specRevision, path: 'style-spec.md',
+      sha256: createHash('sha256').update(spec).digest('hex'),
+    } } : {}),
   }, null, 2)}\n`, { flag: 'wx' });
   return { target, style };
 }

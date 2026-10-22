@@ -3,6 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { parseArgs } from 'node:util';
+import { createHash } from 'node:crypto';
 import { getStyle, resource, skillRoot } from './lib/styles.mjs';
 
 try {
@@ -17,6 +18,22 @@ try {
     const recorded = JSON.parse(readFileSync(metadata, 'utf8'));
     if (recorded.style !== style.id || recorded.runtime !== style.runtime) {
       throw new Error('Selected style/runtime does not match red-deck.json.');
+    }
+    if (recorded.styleSpec) {
+      const snapshot = recorded.styleSpec;
+      if (snapshot.path !== 'style-spec.md' || typeof snapshot.revision !== 'string') {
+        throw new Error('Invalid style specification snapshot metadata.');
+      }
+      const actual = createHash('sha256').update(readFileSync(join(dirname(file), snapshot.path))).digest('hex');
+      if (actual !== snapshot.sha256) throw new Error('Style specification snapshot differs from its recorded checksum.');
+      if (snapshot.revision !== style.specRevision) {
+        console.log(`NOTE Deck uses specification ${snapshot.revision}; current package uses ${style.specRevision ?? 'no specification'}. Review migration explicitly.`);
+      } else if (style.spec) {
+        const current = createHash('sha256').update(readFileSync(resource(skillRoot, style.spec))).digest('hex');
+        if (current !== snapshot.sha256) {
+          console.log('NOTE Current specification content differs at the same revision. Keep the recorded snapshot and review the difference explicitly.');
+        }
+      }
     }
   }
   const html = readFileSync(file, 'utf8');
