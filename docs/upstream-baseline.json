@@ -1,0 +1,11 @@
+{
+  "repository": "op7418/guizang-ppt-skill",
+  "branch": "main",
+  "commit": "c91369c449d34755d320a8b81d0734000d99d1ab",
+  "inheritedFiles": {
+    "assets/template.html": "280488b6247d396cd48e46fa9ace7b60ed0e6f91",
+    "assets/template-swiss.html": "455cb527108ac03252aac0224e8c4baf25331739",
+    "assets/motion.min.js": "2474e1545753d27ae9ee9d1e31d84b47be75a50d"
+  },
+  "hashFormat": "git-blob-sha1"
+}

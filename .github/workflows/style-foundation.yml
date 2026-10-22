@@ -1,0 +1,23 @@
+name: Style foundation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/styles.mjs --check
+      - run: node --test tests/*.test.mjs
+      - run: node scripts/check-presenter-runtime-sync.mjs
+      - run: node scripts/validate-presenter-mode.mjs assets/template.html
+      - run: node scripts/validate-presenter-mode.mjs assets/template-swiss.html
