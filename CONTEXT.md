@@ -2,7 +2,7 @@
 
 ## 恢复入口
 
-先核对`git status --short --branch`与`git remote -v`，再读本文件。仓库为`hongaston-arch/red-ppt-skill`；基础改造在`feat/style-registry-foundation`草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)，共享演讲者源在`codex/shared-presenter-runtime`草稿[PR #2](https://github.com/hongaston-arch/red-ppt-skill/pull/2)。当前`codex/swiss-safety-images`从PR #2的`2ac5efb`创建，另提交依赖它的草稿PR，编号以GitHub查询为准。各草稿均不自动合并；前序审查后再评估重新定基与改目标。
+先核对`git status --short --branch`与`git remote -v`，再读本文件。仓库为`hongaston-arch/red-ppt-skill`；基础改造在`feat/style-registry-foundation`草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)，共享演讲者源在`codex/shared-presenter-runtime`草稿[PR #2](https://github.com/hongaston-arch/red-ppt-skill/pull/2)。当前`codex/swiss-safety-images`从PR #2的`2ac5efb`创建，另提交依赖它的草稿[PR #3](https://github.com/hongaston-arch/red-ppt-skill/pull/3)，实际状态以GitHub查询为准。各草稿均不自动合并；前序审查后再评估重新定基与改目标。
 
 ## 用户目标与已作决定
 
