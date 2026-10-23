@@ -2,7 +2,7 @@
 
 ## 恢复入口
 
-先核对 `git status --short --branch` 与 `git remote -v`，再读取本文件。仓库为 `hongaston-arch/red-ppt-skill`；基础改造在`feat/style-registry-foundation`草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)。当前分支`codex/shared-presenter-runtime`依赖该分支的`5f23ed2`提交，另走独立草稿PR，目标暂为基础分支。PR编号与合并状态以GitHub实际查询为准；基础PR合并后，再评估重新定基与改目标到main，不自动合并。
+先核对 `git status --short --branch` 与 `git remote -v`，再读取本文件。仓库为 `hongaston-arch/red-ppt-skill`；基础改造在`feat/style-registry-foundation`草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)。当前分支`codex/shared-presenter-runtime`依赖该分支的`5f23ed2`提交，另走独立草稿[PR #2](https://github.com/hongaston-arch/red-ppt-skill/pull/2)，目标暂为基础分支。实际分支与合并状态仍以GitHub查询为准；基础PR合并后，再评估重新定基与改目标到main，不自动合并。
 
 ## 用户目标与已作决定
 
