@@ -1,0 +1,19 @@
+{
+  "baselineCommit": "5f23ed2b8186c0a84a16a4dceec5487ef3f8e525",
+  "templates": [
+    {
+      "file": "assets/template.html",
+      "beforeSha256": "e97ae73269d34afa683bb051c85957d68cd6447b26e3a192f96fea382174488e",
+      "afterSha256": "e97ae73269d34afa683bb051c85957d68cd6447b26e3a192f96fea382174488e",
+      "bytes": 103183,
+      "identical": true
+    },
+    {
+      "file": "assets/template-swiss.html",
+      "beforeSha256": "8c6ca39f4f20545d4a815fc405209fcaa56cf000a897ee9e2248c3dbb6912e04",
+      "afterSha256": "8c6ca39f4f20545d4a815fc405209fcaa56cf000a897ee9e2248c3dbb6912e04",
+      "bytes": 165895,
+      "identical": true
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "browser": "155.0.8059.85",
+  "fontMode": "Google Fonts blocked; system fallback",
+  "lucideMode": "supplied local UMD",
+  "checks": [
+    {
+      "style": "magazine",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slides": 2,
+      "passed": true,
+      "actions": [
+        "End/left/Home",
+        "overview",
+        "low-power",
+        "presenter next/previous",
+        "notes match and persistence",
+        "grid",
+        "timer",
+        "audience close/reopen",
+        "restart"
+      ]
+    },
+    {
+      "style": "magazine",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slides": 2,
+      "passed": true,
+      "actions": [
+        "End/left/Home",
+        "overview",
+        "low-power",
+        "presenter next/previous",
+        "notes match and persistence",
+        "grid",
+        "timer",
+        "audience close/reopen",
+        "restart"
+      ]
+    },
+    {
+      "style": "swiss",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slides": 2,
+      "passed": true,
+      "actions": [
+        "End/left/Home",
+        "overview",
+        "low-power",
+        "presenter next/previous",
+        "notes match and persistence",
+        "grid",
+        "timer",
+        "audience close/reopen",
+        "restart"
+      ]
+    },
+    {
+      "style": "swiss",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slides": 2,
+      "passed": true,
+      "actions": [
+        "End/left/Home",
+        "overview",
+        "low-power",
+        "presenter next/previous",
+        "notes match and persistence",
+        "grid",
+        "timer",
+        "audience close/reopen",
+        "restart"
+      ]
+    }
+  ],
+  "pageErrors": [],
+  "passed": true
+}

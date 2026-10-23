@@ -2,7 +2,7 @@
 
 ## 恢复入口
 
-先核对 `git status --short --branch` 与 `git remote -v`，再读取本文件。仓库应为 `hongaston-arch/red-ppt-skill`；当前改造分支为 `feat/style-registry-foundation`，草稿 [PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)。实际分支和远程状态以 Git/GitHub 查询为准，不因本文存在就假定已经合并或发布。
+先核对 `git status --short --branch` 与 `git remote -v`，再读取本文件。仓库为 `hongaston-arch/red-ppt-skill`；基础改造在`feat/style-registry-foundation`草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)。当前分支`codex/shared-presenter-runtime`依赖该分支的`5f23ed2`提交，另走独立草稿[PR #2](https://github.com/hongaston-arch/red-ppt-skill/pull/2)，目标暂为基础分支。实际分支与合并状态仍以GitHub查询为准；基础PR合并后，再评估重新定基与改目标到main，不自动合并。
 
 ## 用户目标与已作决定
 
@@ -13,13 +13,13 @@
 
 ## 当前范围
 
-已有：两个继承风格的注册、初始化与校验工具；Swiss模板仅补齐S15组件与对应动效，演讲者CSS/JS保持同步。
+已有：两个继承风格注册、初始化/校验工具、Swiss S15及六类样张；Q01–Q05确定，Q06/Q07按方案继续验证。本分支新增runtime/presenter.css与presenter.js单一维护源、组装/检查命令与运行时集成检查；两个模板保留内嵌代码，与提取前字节一致。普通导航、各风格动效与通用布局测量没有在本轮提取。
 
 本次：确认流程、规格模板、Swiss `draft-05` 定义卡、项目记录模板、读取顺序及规格快照。Q04/Q05全局范围获明确答复，Q06/Q07按方案继续验证。入口见 [确认流程](docs/style-confirmation.md)；Swiss 的唯一规格入口为 [spec.md](styles/swiss/spec.md)。具体规则和冲突只在那里维护，本文件不复制其内容。
 
-已确认：Swiss Q01–Q05方向，相关说明已统一；S15测试及六类代表页的答复限本轮展示范围。Q06/Q07按用户选择的方案继续验证。尚未完成：该方案的通用测量接入与真实图片素材验证、跨平台/真实投影验收、共享运行时提取、第三种风格、稳定版本发布、分支保护配置。之前的CI通过不代表新提交或视觉检查已经通过；每次工作结束应报告本次实际检查结果。
+尚未完成：Q06方案的通用测量接入、Q07真实截图/照片验证、跨平台/投影验收、普通导航的共享源提取、第三种风格、稳定发布与分支保护。历史QA与规格快照保留生成时状态，后续用户决定查当前Swiss规格，不从旧QA中的“待确认”倒推当前状态。之前的CI通过不代表新提交通过，每次结束报告实际检查。
 
-本地已执行风格清单检查与20项Node测试；S15与新增六类代表页的三视口Chrome布局、翻页/总览/静态模式，以及1920演讲者同步与观众恢复通过。详见docs/qa/swiss-s15.md与docs/qa/swiss-representative.md；其列出的未测项不写成通过。新增六页仅在示例内补齐CSS，不改模板与运行时；历史P/S编号和S11类名差异已标记。远程检查结果以PR最新提交的实际CI状态为准。
+本分支验证记录见docs/qa/presenter-source.md：新增6项源组装测试，完整26项Node检查；两风格1600×900及1280×720的翻页/总览/低功耗、演讲者同步、备注、计时、观众关闭恢复通过。模板字节比较、源同步与静态演讲者检查分别记录。前轮Swiss三视口记录仍见docs/qa/swiss-s15.md与swiss-representative.md；不将各记录未测项写成通过，CI以最新提交为准。
 
 ## 新聊天如何继续
 
@@ -31,7 +31,7 @@
 
 ## 下一步
 
-不重复询问已确定的Q04/Q05范围；Q06/Q07按用户选择的方案继续实现与素材验证，不声称全部版式已通过。独立推进共享演讲者源提取，保留两模板输出字节不变；既有S15与六类样张无需重问。配色仍为样张默认，不视为正式配色选择。后续再扩展新风格；当前PR保持草稿，不能把样张答复当作合并授权。
+完成两份草稿PR的审查；Q06/Q07按确认方向继续测量接入与真实素材样张验证。新风格另做定义卡与experimental包，不将Swiss规则推广到其他风格。用户已担心视觉选择数量，后续扩展不局限于两种配色，但暂不并行铺开多套。既有确认无需重问；当前草稿不自动合并或发布。
 
 ## 新聊天启动语
 

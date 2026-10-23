@@ -24,6 +24,7 @@
 node scripts/styles.mjs --check
 node --test tests/*.test.mjs
 node scripts/check-presenter-runtime-sync.mjs
+node scripts/build-presenter-runtime.mjs --check
 node scripts/validate-presenter-mode.mjs assets/template.html
 node scripts/validate-presenter-mode.mjs assets/template-swiss.html
 ```
@@ -31,6 +32,8 @@ node scripts/validate-presenter-mode.mjs assets/template-swiss.html
 杂志模板是空骨架，演讲者校验的无页面 warning 是已知基线，不能当作完成稿。Swiss 模板的封面/收尾也是示例，完成稿仍需通过 `validate-deck.mjs --style swiss <file>`。
 
 修改模板、布局或运行时还需实际浏览器检查：文字与图片边界、前后翻页、总览、静态模式、演讲者/观众同步、关闭并恢复观众窗口。静态测试不能代替这些检查。
+
+演讲者CSS/JS只在`runtime/`维护，再用`node scripts/build-presenter-runtime.mjs --write`更新登记模板。维护源、预组装产物与宿主接口见[presenter-runtime.md](presenter-runtime.md)。组装不更新历史示例快照，行为变更时须明确需要重建和验证哪些示例。
 
 ## 同步上游
 
@@ -41,7 +44,7 @@ node scripts/validate-presenter-mode.mjs assets/template-swiss.html
 ## 当前里程碑
 
 1. 本 PR：Red 入口、两个既有风格的清单适配、初始化/校验 CLI、自动化检查与维护约定。
-2. 后续 PR：提取共享运行时源与通用布局测量；用现有两种风格验证行为不变。
+2. 独立PR：先提取共享演讲者源，验证两套模板字节与行为不变；普通导航和通用布局测量另行评估，不混作已完成。
 3. 后续 PR：选择第三种风格，以 experimental 包完成完整示例并验证扩展接口。
 4. 验收后：风格预览目录与版本发布。
 
