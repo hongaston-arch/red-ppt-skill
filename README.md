@@ -4,7 +4,7 @@
 
 [English](README.en.md) · [使用入口](SKILL.md) · [风格包契约](docs/style-packs.md) · [维护流程](docs/maintenance.md)
 
-新聊天先读 [CONTEXT.md](CONTEXT.md)。风格确定按 [确认流程](docs/style-confirmation.md) 执行；[Swiss定义卡 draft-04](styles/swiss/spec.md) 已记录来源规则、冲突与待确认项；Q01/Q02/Q03方向和已展示S15测试已获确认，已展示六类代表页获“可以”答复；其余全局规则仍待逐项确定。有规格的风格会在生成目录保存规格快照，便于后续聊天核对创作依据。
+新聊天先读 [CONTEXT.md](CONTEXT.md)。风格确定按 [确认流程](docs/style-confirmation.md) 执行；[Swiss定义卡 draft-05](styles/swiss/spec.md) 已记录来源、冲突和确认；Q01–Q05方向已确定，S15及六类代表页的答复限本轮展示范围；Q06/Q07按确认方案继续验证。有规格的风格会在生成目录保存规格快照，便于后续聊天核对创作依据。
 
 ## 当前状态
 
