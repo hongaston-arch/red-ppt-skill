@@ -12,6 +12,8 @@
 
 生成正文页时不要把 Swiss 当成“自由组合的风格包”。默认只能使用 `references/swiss-layout-lock.md` 登记的 `S01-S22`。每个 slide 都必须在 `<section>` 上写 `data-layout="Sxx"`。
 
+**已核对的来源差异**：下文保留了历史 P 编号与片段，不保证与登记的 S 编号逐一对应。P3 的单屏 statement 片段不满足 S03 的 split 骨架；P10 点阵片段不满足 S10 的 split closing 骨架。制作 S03/S10 时按版式锁保留双半屏，不能直接给这些历史片段标上相同 S 编号。P11 的 `.tl-h-node/.lbl` 片段与模板实际 `.th-node/.label` 不同；当前动效依赖后者。可运行的六类代表页见 `examples/swiss-representative-review/index.html`，核对范围见 `docs/qa/swiss-representative.md`；这不表示其他历史片段均已修正。
+
 **关键约束**:
 
 - 顶部中文标题默认左对齐并处在左上内容轴;不要把标题放到页面中间。

@@ -11,3 +11,5 @@
 路径均相对于 Skill 根目录。`new-deck.mjs` 替代旧指南中的手动复制步骤。完成后运行 `validate-deck.mjs --style swiss`，再做浏览器视觉与演讲者交互检查。
 
 Swiss 校验器只有找到 Playwright 时才做浏览器测量；必须检查其输出，不能把静态通过当成浏览器测量完成。
+
+六类代表页见 `examples/swiss-representative-review/index.html`，可用 `node scripts/build-swiss-representative-example.mjs <新目录>` 重建。它展示封面、长中文标题、四项正文、图片、流程与收尾，样张值和检查条件见其 PROJECT.md 与 `docs/qa/swiss-representative.md`；例内 CSS 不自动成为全局模板规则。
