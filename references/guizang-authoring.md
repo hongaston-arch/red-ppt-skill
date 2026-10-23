@@ -4,7 +4,7 @@
 
 来源：op7418/guizang-ppt-skill，基线提交见 `docs/upstream-baseline.json`。保留原有制作说明；更新与安装策略由根目录 `SKILL.md` 管理。原文中的项目赞助信息指上游项目，不代表 Red fork 获得同样支持。
 
-已知规则优先级：用户明确要求优先；截图保真要求优先于裁切；瑞士投屏正文采用 Step 3.2.2 的至少 400 字重，覆盖后文的旧“正文 300”摘要；配色按所选风格的 themes 文件选择（杂志 5 套、瑞士 4 套）。
+已知规则优先级：用户明确要求优先；截图保真要求优先于裁切；瑞士投屏正文采用 Step 3.2.2 的至少 400 字重，已按Q02确认同步修正文档中的旧摘要；配色按所选风格的 themes 文件选择（杂志 5 套、瑞士 4 套）。
 
 ---
 
@@ -504,7 +504,7 @@ node <SKILL_ROOT>/scripts/validate-swiss-deck.mjs path/to/index.html
 14. **playSlide 入口 reveal 容器**——`[data-anim]` 容器先强制 opacity:1,recipe 内再用 motion `{opacity:[0,1]}` 覆盖,否则有些页会"看不见"
 15. **ESC 索引页可见性**——cloned slide 必须有 CSS override 让 `[data-anim]` 在缩略图里 opacity:1
 16. **Helvetica/Inter 兜底中文字体**——Windows 用户没有"苹方",必须 fallback 到 `"Microsoft YaHei UI", "Noto Sans SC"`
-17. **字体粗细体例**:大字 200 / 正文 300 / `t-cat` SemiBold 600 / `t-meta` mono uppercase
+17. **字体粗细体例**:大字200 / 正式投屏正文400–500 / `t-cat` SemiBold 600 / `t-meta` mono uppercase
 18. **保留低功耗快捷键**——右下角必须提示 `B 静态`;按 `B` 切换 `body.low-power`,停止 WebGL/ASCII canvas RAF 和 Motion 入场动画
 19. **装饰元素严格在 grid 内**——bars 矩阵、点阵、ring-mat 不能贴边或溢出页面
 20. **底部内容预留 nav 空间**——nav 在 ~97vh,内容收尾不要过 93vh(吸取 P22 KPI 大字溢底教训)
@@ -598,7 +598,7 @@ guizang-ppt-skill/
 2. **极致字号对比** — 主标题与正文比例 ≥ 8:1,KPI 必须是"Data Hero"(屏幕宽度的 18-22%)
 3. **无衬线只此一家** — Inter / Helvetica / Noto Sans SC,任何衬线都是错的
 4. **直角纯色** — 不允许渐变 / 阴影 / 圆角(rule 横线除外)
-5. **网格至上** — 所有元素吸附到 12-col grid,左对齐 + 大幅留白做非对称美学
+5. **网格至上** — 所有元素遵守所选登记版式的实际网格与对齐轴，不强制统一列数；左对齐与留白形成非对称层级
 6. **Hairline 是手术刀** — 1px 的极细分割线就够,不要加粗、不要加阴影
 7. **点阵装饰只在 hero 页透出** — 正文页保持纯净底色
 

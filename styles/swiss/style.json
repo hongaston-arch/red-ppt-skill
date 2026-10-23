@@ -7,7 +7,7 @@
   "template": "assets/template-swiss.html",
   "guide": "styles/swiss/guide.md",
   "spec": "styles/swiss/spec.md",
-  "specRevision": "draft-01",
+  "specRevision": "draft-02",
   "layouts": "references/layouts-swiss.md",
   "themes": "references/themes-swiss.md",
   "rules": ["references/swiss-layout-lock.md", "references/checklist.md"],

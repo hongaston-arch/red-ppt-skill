@@ -34,7 +34,7 @@
 
 **排版**
 - 字体:`var(--sans)` Inter / Helvetica Neue + `var(--mono)` JetBrains Mono
-- 字重:**200 (ExtraLight) 大字** / **300 (Light) 正文** / **600 (SemiBold) t-cat 小标**
+- 字重:**200 (ExtraLight) 大字** / **400–500 正式投屏正文** / **600 (SemiBold) t-cat 小标**。正文按下方字号阶梯处理，不能统一套300。
 - 大标题遵循原始 PPT 的实际页面用法:主标题 `font-weight:200`,重点词/数字 `font-weight:300`;不要因为旧 CSS helper 里残留过 800/900 就把 Swiss 大标题加粗
 - 大字号收紧:`letter-spacing:-.04em` / `line-height:.9`
 - mono 数字:`font-feature-settings:"tnum","ss01"`
@@ -78,7 +78,7 @@
 - 封面/IKB 反白大标题内强调字用 `italic + weight 300`,不要用 accent 色(蓝压蓝看不见)
 
 **网格**(IBM Carbon 2x Grid 改造)
-- 16 列 grid:`grid-template-columns:repeat(16,1fr)` + `gap:16px`
+- 按登记版式的实际骨架使用网格；不强制全局统一列数。模板`.grid-12`为12列，其余布局保留各自定义；间距按模板token与所选骨架。
 - spacing token:`--sp-3` 8 / `--sp-4` 12 / `--sp-5` 16 / `--sp-6` 24 / `--sp-7` 32 / `--sp-8` 40 / `--sp-9` 48 / `--sp-10` 64 / `--sp-11` 80 / `--sp-12` 96 / `--sp-13` 160
 
 **画布**
@@ -178,7 +178,7 @@ chrome-min(页眉)、主体内容、底部 footnote 都是 canvas-card 的子元
 - 瑞士风图片优先比例:S22 顶部横幅 `21:9`;S15/S16 多图格统一 `21:9` 或统一 `16:10`
 - 生成 2-3 张配图时,必须先绑定原始版式槽位:单张大图 = S22;多图 = S15/S16 网格改造;不要使用未登记的 P23/P24
 - S22 的照片主体必须位于中央安全区,HTML 用 `object-position:center 35%` 或 `center center`,不要用 `top center` 截人脸
-- GPT-M 2.0 生成图必须遵守单一 accent 色、Helvetica/Inter 气质、12/16 列网格、直角纯色、无渐变/阴影/圆角
+- GPT-M 2.0 生成图必须遵守单一 accent 色、Helvetica/Inter 气质、与所选版式一致的网格、直角纯色、无渐变/阴影/圆角
 - 生成图只保留核心图像本身,不要把页眉、页脚、标题、页码、角标、边框、署名画进图片里
 
 **版式多样性硬规则**
@@ -620,7 +620,7 @@ Swiss 主题有 22 个登记版式,生成时要主动展示版式系统,不要�
 
 **用途**:大量同类项展示(8-12 项 skill / 团队成员 / 案例图标),底部一个总数据收束。
 **适用内容类型**:**8-12 项同类型小项 + 一个汇总指标**。每项只承载短标题(无展开),底部巨数为「汇总值」(项目总数 / 总流量 / 总用户)。**项数过少改用 P4(6 项)**。
-**骨架**:顶部标题(留 9vh 间距)/ 中段 4×3 矩阵卡(每卡 12vh 固定高度)/ 底部巨数 + 标签(margin-top:auto 推到底)。
+**骨架**:顶部标题(留 9vh 间距)/ 中段4列×3行矩阵卡（12项容量；8–12项内容保持4列，不自动改列数）(每卡 12vh 固定高度)/ 底部巨数 + 标签(margin-top:auto 推到底)。
 **关键类**:`.matrix-fill`(grid-template-columns:repeat(4,1fr))`.matrix-cell`(`.card-fill` 灰底,**禁止描边**)`.hero-stat-bottom`
 **动效 recipe**:`matrix-fill` — 12 格随机棋盘渐显(每格 random delay)→ 底部巨数 count-up
 **注意**:卡片高度限定(避免大数字溢出);**所有卡用 `.card-fill` 灰底**,只突出强调项时单独换 `.card-accent`

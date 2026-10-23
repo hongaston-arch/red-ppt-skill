@@ -4,7 +4,7 @@ A multi-style HTML presentation skill forked from [Guizang PPT Skill](https://gi
 
 [中文](README.md) · [Style package contract](docs/style-packs.md) · [Maintenance](docs/maintenance.md)
 
-For a new chat, start with [CONTEXT.md](CONTEXT.md). The [confirmation workflow](docs/style-confirmation.md) and [Swiss draft specification](styles/swiss/spec.md) distinguish inherited rules, proposals, user decisions, and verification. Direction and sample approval are still pending. Styles with a registered specification preserve a checksummed snapshot in each new deck.
+For a new chat, start with [CONTEXT.md](CONTEXT.md). The [confirmation workflow](docs/style-confirmation.md) and [Swiss draft specification](styles/swiss/spec.md) distinguish inherited rules, proposals, user decisions, and verification. Direction decisions Q01–Q03 are confirmed, including a four-column, three-row S15 matrix; sample approval remains pending. Styles with a registered specification preserve a checksummed snapshot in each new deck.
 
 ## Current scope
 
