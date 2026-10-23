@@ -8,7 +8,7 @@ For a new chat, start with [CONTEXT.md](CONTEXT.md). The [confirmation workflow]
 
 ## Current scope
 
-The foundation registers `magazine` and `swiss`, with S15 and six representative Swiss pages. Shared presenter source is already available on the preceding branch. This dependent branch adds Swiss 93vh/navigation-clearance measurements and original-image checks, with two image review pages. Templates remain preassembled and unchanged. A third style is still a proposal; these draft branches have not been released to stable main.
+The foundation registers `magazine` and `swiss`, with representative Swiss pages, shared presenter source, and Swiss-specific safety/image checks. This dependent branch adds the experimental `modern-business` package: medium headings, small rounded modules, six representative pages and separate structural/browser checks. Its direction is confirmed; exact visual choices and samples still need user review. See the [specification](styles/modern-business/spec.md) and [QA record](docs/qa/modern-business.md). The two inherited templates and shared presenter sources are unchanged. These draft branches have not been released to stable main.
 
 After this branch is reviewed and merged, install the stable main branch:
 

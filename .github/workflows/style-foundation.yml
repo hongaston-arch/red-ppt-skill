@@ -22,3 +22,5 @@ jobs:
       - run: node scripts/build-presenter-runtime.mjs --check
       - run: node scripts/validate-presenter-mode.mjs assets/template.html
       - run: node scripts/validate-presenter-mode.mjs assets/template-swiss.html
+      - run: node scripts/validate-presenter-mode.mjs assets/template-modern-business.html
+      - run: node scripts/validate-deck.mjs --style modern-business examples/modern-business-review/index.html
