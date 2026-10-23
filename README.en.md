@@ -8,7 +8,7 @@ For a new chat, start with [CONTEXT.md](CONTEXT.md). The [confirmation workflow]
 
 ## Current scope
 
-This foundation registers the inherited `magazine` and `swiss` styles and adds scaffolding and validation commands. The original templates and presenter runtime remain unchanged. Shared runtime source extraction and a third style are future work, not completed features.
+This foundation registers the inherited `magazine` and `swiss` styles and adds scaffolding and validation commands. The templates and presenter runtime are inherited; this branch adds scoped Swiss S15 matrix components and a four-column animation. The presenter runtime remains unchanged. Shared runtime source extraction and a third style are future work, not completed features.
 
 After this branch is reviewed and merged, install the stable main branch:
 

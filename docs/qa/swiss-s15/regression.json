@@ -1,0 +1,33 @@
+{
+  "browser": "155.0.8059.85",
+  "fontMode": "system fallback",
+  "results": [
+    {
+      "slide": "inherited cover",
+      "maxChannelDifference": 1,
+      "changedPixels": 242,
+      "totalPixels": 2073600,
+      "withinTolerance": true
+    },
+    {
+      "slide": "inherited closing",
+      "maxChannelDifference": 0,
+      "changedPixels": 0,
+      "totalPixels": 2073600,
+      "withinTolerance": true
+    },
+    {
+      "slide": "S22 image",
+      "maxChannelDifference": 0,
+      "changedPixels": 0,
+      "totalPixels": 2073600,
+      "withinTolerance": true
+    }
+  ],
+  "image": {
+    "complete": true,
+    "width": 2100,
+    "height": 900,
+    "fit": "contain"
+  }
+}

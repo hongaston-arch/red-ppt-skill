@@ -620,10 +620,14 @@ Swiss 主题有 22 个登记版式,生成时要主动展示版式系统,不要�
 
 **用途**:大量同类项展示(8-12 项 skill / 团队成员 / 案例图标),底部一个总数据收束。
 **适用内容类型**:**8-12 项同类型小项 + 一个汇总指标**。每项只承载短标题(无展开),底部巨数为「汇总值」(项目总数 / 总流量 / 总用户)。**项数过少改用 P4(6 项)**。
-**骨架**:顶部标题(留 9vh 间距)/ 中段4列×3行矩阵卡（12项容量；8–12项内容保持4列，不自动改列数）(每卡 12vh 固定高度)/ 底部巨数 + 标签(margin-top:auto 推到底)。
+**骨架**:顶部标题/ 中段4列×3行矩阵卡（12项容量；8–12项内容保持4列，不自动改列数）/ 底部巨数 + 标签。S15专属CSS默认标题到矩阵9vh、每行约12vh，较小画布必要时压缩网格可用高度；不降低文字可读性下限。8项时第三行保留空位，不补造内容。
 **关键类**:`.matrix-fill`(grid-template-columns:repeat(4,1fr))`.matrix-cell`(`.card-fill` 灰底,**禁止描边**)`.hero-stat-bottom`
-**动效 recipe**:`matrix-fill` — 12 格随机棋盘渐显(每格 random delay)→ 底部巨数 count-up
+**动效 recipe**:`matrix-fill` — 按4列计算对角线波次渐显 → 底部数字淡入；静态模式直接显示最终状态。
 **注意**:卡片高度限定(避免大数字溢出);**所有卡用 `.card-fill` 灰底**,只突出强调项时单独换 `.card-accent`
+
+**可运行样页**：在根目录运行 `node scripts/build-swiss-s15-example.mjs <新目录>`，会从当前模板生成8项亮底与12项暗底两页，包含稳定页面ID、备注、规格快照和测试内容说明。已生成的 [审阅样页](../examples/swiss-s15-review/index.html) 及 [浏览器检查记录](../docs/qa/swiss-s15.md) 可作对照；样页通过工程检查不等于用户视觉批准。
+
+**组件契约**：`.s15-head` 包含标题并标记 `data-anim="line"`；`.matrix-fill[data-anim="up"]` 包含8–12个直接子项 `.matrix-cell`，每项使用 `.matrix-index` 和 `.matrix-title`；底部 `.hero-stat-bottom[data-anim="up"]` 包含 `.hero-stat-value`、`.hero-stat-label` 与可选 `.hero-stat-context`。这些类均在模板内按 `data-layout="S15"` 限定，不影响其他S编号。不要在slide里重新定义列数。
 
 ---
 

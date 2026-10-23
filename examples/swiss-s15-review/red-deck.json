@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "style": "swiss",
+  "runtime": "guizang-presenter-v1",
+  "title": "Swiss S15 · 4列3行样张",
+  "template": "assets/template-swiss.html",
+  "styleSpec": {
+    "source": "styles/swiss/spec.md",
+    "revision": "draft-03",
+    "path": "style-spec.md",
+    "sha256": "cffa3b9e38e4ec493e0938da1caf5a0f6833b61f082ff7545f82afa8c84cc154"
+  }
+}
