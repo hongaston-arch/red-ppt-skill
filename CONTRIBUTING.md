@@ -1,3 +1,11 @@
+# Contributing to Red PPT Skill
+
+Start with [the maintenance workflow](docs/maintenance.md) and [the style package contract](docs/style-packs.md). Use a focused feature or fix branch and a PR; keep main usable. New styles require an actual example and visual verification before being marked stable.
+
+The following inherited guidance applies to changes to the original Guizang templates, especially the Swiss package. Swiss-specific visual rules do not apply to other style packages.
+
+---
+
 # Contributing
 
 Thanks for helping improve `guizang-ppt-skill`.

@@ -12,6 +12,8 @@
 
 生成正文页时不要把 Swiss 当成“自由组合的风格包”。默认只能使用 `references/swiss-layout-lock.md` 登记的 `S01-S22`。每个 slide 都必须在 `<section>` 上写 `data-layout="Sxx"`。
 
+**已核对的来源差异**：下文保留了历史 P 编号与片段，不保证与登记的 S 编号逐一对应。P3 的单屏 statement 片段不满足 S03 的 split 骨架；P10 点阵片段不满足 S10 的 split closing 骨架。制作 S03/S10 时按版式锁保留双半屏，不能直接给这些历史片段标上相同 S 编号。P11 的 `.tl-h-node/.lbl` 片段与模板实际 `.th-node/.label` 不同；当前动效依赖后者。可运行的六类代表页见 `examples/swiss-representative-review/index.html`，核对范围见 `docs/qa/swiss-representative.md`；这不表示其他历史片段均已修正。
+
 **关键约束**:
 
 - 顶部中文标题默认左对齐并处在左上内容轴;不要把标题放到页面中间。
@@ -34,7 +36,7 @@
 
 **排版**
 - 字体:`var(--sans)` Inter / Helvetica Neue + `var(--mono)` JetBrains Mono
-- 字重:**200 (ExtraLight) 大字** / **300 (Light) 正文** / **600 (SemiBold) t-cat 小标**
+- 字重:**200 (ExtraLight) 大字** / **400–500 正式投屏正文** / **600 (SemiBold) t-cat 小标**。正文按下方字号阶梯处理，不能统一套300。
 - 大标题遵循原始 PPT 的实际页面用法:主标题 `font-weight:200`,重点词/数字 `font-weight:300`;不要因为旧 CSS helper 里残留过 800/900 就把 Swiss 大标题加粗
 - 大字号收紧:`letter-spacing:-.04em` / `line-height:.9`
 - mono 数字:`font-feature-settings:"tnum","ss01"`
@@ -78,7 +80,7 @@
 - 封面/IKB 反白大标题内强调字用 `italic + weight 300`,不要用 accent 色(蓝压蓝看不见)
 
 **网格**(IBM Carbon 2x Grid 改造)
-- 16 列 grid:`grid-template-columns:repeat(16,1fr)` + `gap:16px`
+- 按登记版式的实际骨架使用网格；不强制全局统一列数。模板`.grid-12`为12列，其余布局保留各自定义；间距按模板token与所选骨架。
 - spacing token:`--sp-3` 8 / `--sp-4` 12 / `--sp-5` 16 / `--sp-6` 24 / `--sp-7` 32 / `--sp-8` 40 / `--sp-9` 48 / `--sp-10` 64 / `--sp-11` 80 / `--sp-12` 96 / `--sp-13` 160
 
 **画布**
@@ -178,7 +180,7 @@ chrome-min(页眉)、主体内容、底部 footnote 都是 canvas-card 的子元
 - 瑞士风图片优先比例:S22 顶部横幅 `21:9`;S15/S16 多图格统一 `21:9` 或统一 `16:10`
 - 生成 2-3 张配图时,必须先绑定原始版式槽位:单张大图 = S22;多图 = S15/S16 网格改造;不要使用未登记的 P23/P24
 - S22 的照片主体必须位于中央安全区,HTML 用 `object-position:center 35%` 或 `center center`,不要用 `top center` 截人脸
-- GPT-M 2.0 生成图必须遵守单一 accent 色、Helvetica/Inter 气质、12/16 列网格、直角纯色、无渐变/阴影/圆角
+- GPT-M 2.0 生成图必须遵守单一 accent 色、Helvetica/Inter 气质、与所选版式一致的网格、直角纯色、无渐变/阴影/圆角
 - 生成图只保留核心图像本身,不要把页眉、页脚、标题、页码、角标、边框、署名画进图片里
 
 **版式多样性硬规则**
@@ -620,10 +622,14 @@ Swiss 主题有 22 个登记版式,生成时要主动展示版式系统,不要�
 
 **用途**:大量同类项展示(8-12 项 skill / 团队成员 / 案例图标),底部一个总数据收束。
 **适用内容类型**:**8-12 项同类型小项 + 一个汇总指标**。每项只承载短标题(无展开),底部巨数为「汇总值」(项目总数 / 总流量 / 总用户)。**项数过少改用 P4(6 项)**。
-**骨架**:顶部标题(留 9vh 间距)/ 中段 4×3 矩阵卡(每卡 12vh 固定高度)/ 底部巨数 + 标签(margin-top:auto 推到底)。
+**骨架**:顶部标题/ 中段4列×3行矩阵卡（12项容量；8–12项内容保持4列，不自动改列数）/ 底部巨数 + 标签。S15专属CSS默认标题到矩阵9vh、每行约12vh，较小画布必要时压缩网格可用高度；不降低文字可读性下限。8项时第三行保留空位，不补造内容。
 **关键类**:`.matrix-fill`(grid-template-columns:repeat(4,1fr))`.matrix-cell`(`.card-fill` 灰底,**禁止描边**)`.hero-stat-bottom`
-**动效 recipe**:`matrix-fill` — 12 格随机棋盘渐显(每格 random delay)→ 底部巨数 count-up
+**动效 recipe**:`matrix-fill` — 按4列计算对角线波次渐显 → 底部数字淡入；静态模式直接显示最终状态。
 **注意**:卡片高度限定(避免大数字溢出);**所有卡用 `.card-fill` 灰底**,只突出强调项时单独换 `.card-accent`
+
+**可运行样页**：在根目录运行 `node scripts/build-swiss-s15-example.mjs <新目录>`，会从当前模板生成8项亮底与12项暗底两页，包含稳定页面ID、备注、规格快照和测试内容说明。已生成的 [审阅样页](../examples/swiss-s15-review/index.html) 及 [浏览器检查记录](../docs/qa/swiss-s15.md) 可作对照；样页通过工程检查不等于用户视觉批准。
+
+**组件契约**：`.s15-head` 包含标题并标记 `data-anim="line"`；`.matrix-fill[data-anim="up"]` 包含8–12个直接子项 `.matrix-cell`，每项使用 `.matrix-index` 和 `.matrix-title`；底部 `.hero-stat-bottom[data-anim="up"]` 包含 `.hero-stat-value`、`.hero-stat-label` 与可选 `.hero-stat-context`。这些类均在模板内按 `data-layout="S15"` 限定，不影响其他S编号。不要在slide里重新定义列数。
 
 ---
 
@@ -892,6 +898,6 @@ Swiss 主题有 22 个登记版式,生成时要主动展示版式系统,不要�
 5. ❌ 大字号不限高(`13vw`)→ ✅ 永远 `min(Xvw, Yvh)` 双约束
 6. ❌ ESC 索引页缩略图看不到带动效内容 → ✅ 给 cloned slide 加可见性 override CSS
 7. ❌ 所有页用同一个 fade-up recipe → ✅ 每页一个语义化 recipe,与图形耦合
-8. ❌ 标题 + 卡片间距 < 5vh → ✅ 章节级标题至少 9vh
+8. ❌ 为统一比例而压缩正文或硬塞内容 → ✅ 按登记骨架与标题角色设置间距，实测可读性和边界；不全局强制9vh（Q05已确认）
 9. ❌ 9px 圆形装饰点 → ✅ 8×8 直角小方块 / mono `t-meta` 文字
 10. ❌ 装饰元素超出页面边距 → ✅ 严格在 grid 内,不贴边

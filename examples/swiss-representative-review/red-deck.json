@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "style": "swiss",
+  "runtime": "guizang-presenter-v1",
+  "title": "Swiss · 六类代表页审阅",
+  "template": "assets/template-swiss.html",
+  "styleSpec": {
+    "source": "styles/swiss/spec.md",
+    "revision": "draft-04",
+    "path": "style-spec.md",
+    "sha256": "3d7aa73ad9dd374083bfdd7ca12f001357f7279877870fda4f43cfca26caaac8"
+  }
+}

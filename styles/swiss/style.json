@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "swiss",
+  "name": "瑞士国际主义",
+  "status": "stable",
+  "runtime": "guizang-presenter-v1",
+  "template": "assets/template-swiss.html",
+  "guide": "styles/swiss/guide.md",
+  "spec": "styles/swiss/spec.md",
+  "specRevision": "draft-05",
+  "layouts": "references/layouts-swiss.md",
+  "themes": "references/themes-swiss.md",
+  "rules": ["references/swiss-layout-lock.md", "references/checklist.md"],
+  "assets": ["assets/motion.min.js"],
+  "validators": ["scripts/validate-swiss-deck.mjs"]
+}

@@ -1,0 +1,297 @@
+{
+  "browser": "155.0.8059.85",
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "served from supplied local UMD",
+  "measurements": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "matrix-8",
+      "count": 8,
+      "columns": 4,
+      "rows": 3,
+      "grid": {
+        "left": 96,
+        "top": 295.28125,
+        "right": 1824,
+        "bottom": 710,
+        "width": 1728,
+        "height": 414.71875
+      },
+      "footer": {
+        "left": 96,
+        "top": 811.40625,
+        "right": 1824,
+        "bottom": 982.8125,
+        "width": 1728,
+        "height": 171.40625
+      },
+      "nav": {
+        "left": 943,
+        "top": 1052.40625,
+        "right": 977,
+        "bottom": 1058.40625,
+        "width": 34,
+        "height": 6
+      },
+      "weights": [
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500"
+      ],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "matrix-12",
+      "count": 12,
+      "columns": 4,
+      "rows": 3,
+      "grid": {
+        "left": 96,
+        "top": 295.28125,
+        "right": 1824,
+        "bottom": 710,
+        "width": 1728,
+        "height": 414.71875
+      },
+      "footer": {
+        "left": 96,
+        "top": 811.40625,
+        "right": 1824,
+        "bottom": 982.8125,
+        "width": 1728,
+        "height": 171.40625
+      },
+      "nav": {
+        "left": 943,
+        "top": 1052.40625,
+        "right": 977,
+        "bottom": 1058.40625,
+        "width": 34,
+        "height": 6
+      },
+      "weights": [
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500"
+      ],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "matrix-8",
+      "count": 8,
+      "columns": 4,
+      "rows": 3,
+      "grid": {
+        "left": 80,
+        "top": 249.578125,
+        "right": 1520,
+        "bottom": 595.171875,
+        "width": 1440,
+        "height": 345.59375
+      },
+      "footer": {
+        "left": 80,
+        "top": 672.421875,
+        "right": 1520,
+        "bottom": 819,
+        "width": 1440,
+        "height": 146.578125
+      },
+      "nav": {
+        "left": 783,
+        "top": 876,
+        "right": 817,
+        "bottom": 882,
+        "width": 34,
+        "height": 6
+      },
+      "weights": [
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500"
+      ],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "matrix-12",
+      "count": 12,
+      "columns": 4,
+      "rows": 3,
+      "grid": {
+        "left": 80,
+        "top": 249.578125,
+        "right": 1520,
+        "bottom": 595.171875,
+        "width": 1440,
+        "height": 345.59375
+      },
+      "footer": {
+        "left": 80,
+        "top": 672.421875,
+        "right": 1520,
+        "bottom": 819,
+        "width": 1440,
+        "height": 146.578125
+      },
+      "nav": {
+        "left": 783,
+        "top": 876,
+        "right": 817,
+        "bottom": 882,
+        "width": 34,
+        "height": 6
+      },
+      "weights": [
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500"
+      ],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "matrix-8",
+      "count": 8,
+      "columns": 4,
+      "rows": 3,
+      "grid": {
+        "left": 64,
+        "top": 203.84375,
+        "right": 1216,
+        "bottom": 480.3125,
+        "width": 1152,
+        "height": 276.46875
+      },
+      "footer": {
+        "left": 64,
+        "top": 533.46875,
+        "right": 1216,
+        "bottom": 655.203125,
+        "width": 1152,
+        "height": 121.734375
+      },
+      "nav": {
+        "left": 623,
+        "top": 699.609375,
+        "right": 657,
+        "bottom": 705.609375,
+        "width": 34,
+        "height": 6
+      },
+      "weights": [
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500"
+      ],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "matrix-12",
+      "count": 12,
+      "columns": 4,
+      "rows": 3,
+      "grid": {
+        "left": 64,
+        "top": 203.84375,
+        "right": 1216,
+        "bottom": 480.3125,
+        "width": 1152,
+        "height": 276.46875
+      },
+      "footer": {
+        "left": 64,
+        "top": 533.46875,
+        "right": 1216,
+        "bottom": 655.203125,
+        "width": 1152,
+        "height": 121.734375
+      },
+      "nav": {
+        "left": 623,
+        "top": 699.609375,
+        "right": 657,
+        "bottom": 705.609375,
+        "width": 34,
+        "height": 6
+      },
+      "weights": [
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500",
+        "500"
+      ],
+      "issues": []
+    }
+  ],
+  "interactions": [
+    "1920x1080: navigation, overview, low-power visibility",
+    "1600x900: navigation, overview, low-power visibility",
+    "1280x720: navigation, overview, low-power visibility",
+    "1920x1080: presenter/audience sync, end restart, timer start/pause/reset, grid select, notes by ID, audience close/reopen"
+  ],
+  "pageErrors": [],
+  "passed": true
+}

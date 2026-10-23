@@ -1,0 +1,429 @@
+{
+  "browser": "155.0.8059.85",
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "served from supplied local UMD",
+  "measurements": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "review-cover",
+      "layout": "SWISS-COVER-ASCII",
+      "maxTextBottom": 980.515625,
+      "bodies": [],
+      "structural": {},
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "review-long-title",
+      "layout": "S03",
+      "maxTextBottom": 980.515625,
+      "bodies": [
+        {
+          "size": 24,
+          "weight": 400
+        },
+        {
+          "size": 24,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "halves": 2
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "review-body",
+      "layout": "S19",
+      "maxTextBottom": 980.515625,
+      "bodies": [
+        {
+          "size": 24,
+          "weight": 400
+        },
+        {
+          "size": 24,
+          "weight": 400
+        },
+        {
+          "size": 24,
+          "weight": 400
+        },
+        {
+          "size": 24,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "columns": 4,
+        "cards": 4
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "review-image",
+      "layout": "S22",
+      "maxTextBottom": 859.890625,
+      "bodies": [
+        {
+          "size": 24,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "image": {
+          "loaded": true,
+          "width": 2100,
+          "height": 900,
+          "fit": "contain"
+        }
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "review-process",
+      "layout": "S11",
+      "maxTextBottom": 980.515625,
+      "bodies": [],
+      "structural": {
+        "nodes": 5,
+        "headingColumns": 2,
+        "labelOffset": 0
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "review-closing",
+      "layout": "S10",
+      "maxTextBottom": 980.515625,
+      "bodies": [
+        {
+          "size": 24,
+          "weight": 400
+        },
+        {
+          "size": 20.16,
+          "weight": 400
+        },
+        {
+          "size": 20.16,
+          "weight": 400
+        },
+        {
+          "size": 20.16,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "halves": 2
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "review-cover",
+      "layout": "SWISS-COVER-ASCII",
+      "maxTextBottom": 816.703125,
+      "bodies": [],
+      "structural": {},
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "review-long-title",
+      "layout": "S03",
+      "maxTextBottom": 816.703125,
+      "bodies": [
+        {
+          "size": 20,
+          "weight": 400
+        },
+        {
+          "size": 20,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "halves": 2
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "review-body",
+      "layout": "S19",
+      "maxTextBottom": 816.703125,
+      "bodies": [
+        {
+          "size": 20,
+          "weight": 400
+        },
+        {
+          "size": 20,
+          "weight": 400
+        },
+        {
+          "size": 20,
+          "weight": 400
+        },
+        {
+          "size": 20,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "columns": 4,
+        "cards": 4
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "review-image",
+      "layout": "S22",
+      "maxTextBottom": 720.953125,
+      "bodies": [
+        {
+          "size": 20,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "image": {
+          "loaded": true,
+          "width": 2100,
+          "height": 900,
+          "fit": "contain"
+        }
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "review-process",
+      "layout": "S11",
+      "maxTextBottom": 816.703125,
+      "bodies": [],
+      "structural": {
+        "nodes": 5,
+        "headingColumns": 2,
+        "labelOffset": 0
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "review-closing",
+      "layout": "S10",
+      "maxTextBottom": 816.703125,
+      "bodies": [
+        {
+          "size": 20,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "halves": 2
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "review-cover",
+      "layout": "SWISS-COVER-ASCII",
+      "maxTextBottom": 652.90625,
+      "bodies": [],
+      "structural": {},
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "review-long-title",
+      "layout": "S03",
+      "maxTextBottom": 652.90625,
+      "bodies": [
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "halves": 2
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "review-body",
+      "layout": "S19",
+      "maxTextBottom": 652.90625,
+      "bodies": [
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "columns": 4,
+        "cards": 4
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "review-image",
+      "layout": "S22",
+      "maxTextBottom": 584.984375,
+      "bodies": [
+        {
+          "size": 18,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "image": {
+          "loaded": true,
+          "width": 2100,
+          "height": 900,
+          "fit": "contain"
+        }
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "review-process",
+      "layout": "S11",
+      "maxTextBottom": 652.90625,
+      "bodies": [],
+      "structural": {
+        "nodes": 5,
+        "headingColumns": 2,
+        "labelOffset": 0
+      },
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "review-closing",
+      "layout": "S10",
+      "maxTextBottom": 652.90625,
+      "bodies": [
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        },
+        {
+          "size": 18,
+          "weight": 400
+        }
+      ],
+      "structural": {
+        "halves": 2
+      },
+      "issues": []
+    }
+  ],
+  "interactions": [
+    "1920x1080: six pages, navigation, overview, low-power visibility",
+    "1600x900: six pages, navigation, overview, low-power visibility",
+    "1280x720: six pages, navigation, overview, low-power visibility",
+    "1920x1080: presenter/audience sync, end restart, timer start/pause/reset, grid select, notes by ID, audience close/reopen"
+  ],
+  "pageErrors": [],
+  "passed": true
+}

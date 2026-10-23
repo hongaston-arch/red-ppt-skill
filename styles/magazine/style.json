@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "magazine",
+  "name": "电子杂志 × 电子墨水",
+  "status": "stable",
+  "runtime": "guizang-presenter-v1",
+  "template": "assets/template.html",
+  "guide": "styles/magazine/guide.md",
+  "layouts": "references/layouts.md",
+  "themes": "references/themes.md",
+  "rules": ["references/components.md", "references/checklist.md"],
+  "assets": ["assets/motion.min.js"],
+  "validators": []
+}

@@ -34,7 +34,7 @@
 | S12 | 12 | Manifesto + Ink Banner | 大字 statement + 底部通栏 ink 条 | 无 |
 | S13 | 13 | Three Forces | 左 ink hero 块 + 右 3 张卡 | 无 |
 | S14 | 14 | Loop Form | 左 4 步列表 + 右几何 loop | SVG 禁止文字,标签改 HTML |
-| S15 | 15 | Matrix + Hero Stat | 顶部左对齐标题,中段 6×2 矩阵,底部巨数 | 多图可改造矩阵格,同组统一 `21:9` |
+| S15 | 15 | Matrix + Hero Stat | 顶部左对齐标题,中段 4列×3行矩阵,底部巨数 | 多图可改造矩阵格,同组统一 `21:9` |
 | S16 | 16 | Multi-card Brief | 顶部左对齐标题,下方 3×2 微卡 | 多图可改造卡片内容,同组统一 `21:9` |
 | S17 | 17 | System Diagram | 顶部左小标题+右段落,中部几何系统图,底部三列解释 | SVG 禁止文字,标签改 HTML |
 | S18 | 18 | Why Now | 三列递进 + 底部巨数 | 无 |

@@ -122,6 +122,14 @@ slides.forEach((slide) => {
       errors.push(`Slide ${slide.idx}: S22 photo uses object-position:top center, which commonly crops faces. Use center 35% or center center.`);
     }
   }
+  if (layout === 'S15') {
+    const hasClass = (tag, name) => (tag.match(/\bclass="([^"]*)"/)?.[1] || '').split(/\s+/).includes(name);
+    const tags = [...slide.html.matchAll(/<[a-z][^>]*>/gi)].map(match => match[0]);
+    const count = tags.filter(tag => hasClass(tag, 'matrix-cell')).length;
+    if (!tags.some(tag => hasClass(tag, 'matrix-fill'))) errors.push(`Slide ${slide.idx}: S15 requires a .matrix-fill grid.`);
+    if (count < 8 || count > 12) errors.push(`Slide ${slide.idx}: S15 requires 8-12 .matrix-cell items in a four-column, three-row capacity; found ${count}.`);
+    if (!tags.some(tag => hasClass(tag, 'hero-stat-bottom'))) errors.push(`Slide ${slide.idx}: S15 requires a .hero-stat-bottom summary.`);
+  }
 });
 
 async function runRenderedMeasurements() {
@@ -265,12 +273,22 @@ async function runRenderedMeasurements() {
             safeBottom,
           },
           titleGaps: titleGapChecks(el, nodes),
+          s15Grid: el.dataset.layout === 'S15' ? (() => {
+            const grid = el.querySelector('.matrix-fill');
+            if (!grid) return null;
+            const css = getComputedStyle(grid);
+            return { columns: css.gridTemplateColumns.trim().split(/\s+/).length,
+              rows: css.gridTemplateRows.trim().split(/\s+/).length };
+          })() : null,
         };
       });
     });
 
     for (const m of measures) {
       const prefix = `Slide ${m.idx}${m.layout ? ` (${m.layout})` : ''}`;
+      if (m.s15Grid && (m.s15Grid.columns !== 4 || m.s15Grid.rows !== 3)) {
+        errors.push(`${prefix}: S15 rendered grid must have four columns and three reserved rows; found ${m.s15Grid.columns} columns and ${m.s15Grid.rows} rows.`);
+      }
       if (m.scrollOverflow > 4) {
         errors.push(`${prefix}: M1 DOM overflow ${m.scrollOverflow}px. ${overflowFix(m.scrollOverflow)}.`);
       }
