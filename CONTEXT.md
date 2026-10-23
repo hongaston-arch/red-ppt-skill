@@ -2,7 +2,7 @@
 
 ## 恢复入口
 
-先核对`git status --short --branch`与`git remote -v`，再读本文件。仓库为`hongaston-arch/red-ppt-skill`；基础改造为草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)，共享演讲者源为草稿[PR #2](https://github.com/hongaston-arch/red-ppt-skill/pull/2)，Swiss安全区/原图为草稿[PR #3](https://github.com/hongaston-arch/red-ppt-skill/pull/3)。当前`codex/modern-business-style`从PR #3的`108837b`创建，目标为`codex/swiss-safety-images`，另提交依赖它的现代商务草稿PR，实际状态以GitHub查询为准。各草稿均不自动合并；前序审查后再评估重新定基与改目标。main仍为稳定安装基线。
+先核对`git status --short --branch`与`git remote -v`，再读本文件。仓库为`hongaston-arch/red-ppt-skill`；基础改造为草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)，共享演讲者源为草稿[PR #2](https://github.com/hongaston-arch/red-ppt-skill/pull/2)，Swiss安全区/原图为草稿[PR #3](https://github.com/hongaston-arch/red-ppt-skill/pull/3)。当前`codex/modern-business-style`从PR #3的`108837b`创建，目标为`codex/swiss-safety-images`，现代商务为依赖它的草稿[PR #4](https://github.com/hongaston-arch/red-ppt-skill/pull/4)，实际状态以GitHub查询为准。各草稿均不自动合并；前序审查后再评估重新定基与改目标。main仍为稳定安装基线。
 
 ## 用户目标与已作决定
 
@@ -21,6 +21,8 @@
 尚未完成：现代商务六页的用户视觉审阅、复杂表格/图表/代码与照片cover扩展；全部Swiss版式、密集业务截图/人像、跨平台/投影验收、普通导航源提取、稳定发布与分支保护。历史QA与规格快照保留生成时状态，后续决定查当前规格。CI以实际提交为准。
 
 当前验证条件与结果见docs/qa/modern-business.md；静态检查34项，浏览器报告按实际记录。Swiss上轮记录在docs/qa/swiss-safety-images.md，不扩大为本轮全部Swiss重测通过。原图、规格快照与确认状态均需分开理解。
+
+功能提交6860ec2的Style foundation与Presenter runtime sync两项CI已实际查询为success。交付目录为`/Users/rxck01/Desktop/codex/2026-10-21/new-chat/outputs/modern-business-review`，同级有zip；包含6页HTML、原截图、规格快照、完整定义卡、7张预览图与报告。交付HTML/素材与仓库样张逐字节一致，zip CRC已检查；详情见交付目录delivery.json。工程完成不代表用户已认可样张。
 
 ## 新聊天如何继续
 
