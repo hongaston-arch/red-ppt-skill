@@ -8,14 +8,15 @@
 
 ## 当前状态
 
-首批基础改造：登记原有两种风格，提供初始化与校验命令；已补齐Swiss S15与六类代表页。当前独立分支进一步提取[共享演讲者源](docs/presenter-runtime.md)，保留预组装HTML与既有使用方法；Swiss安全区测量与原图处理检查已接入；普通导航提取、其他风格测量与第三种风格尚未完成。工作分支需经PR审查后合并main，当前说明不代表稳定版已发布。
+基础改造已登记原有两种风格并提供初始化与校验命令；已补齐Swiss代表页、[共享演讲者源](docs/presenter-runtime.md)、Swiss安全区与原图检查。本分支新增独立的现代商务experimental包及六页样张，具体条件见[验证记录](docs/qa/modern-business.md)。普通导航提取和更多内容类型仍未完成。各工作分支需经草稿PR审查后合并main，当前说明不代表稳定版已发布。
 
 | 风格 ID | 名称 | 适用内容 | 指南 |
 |---|---|---|---|
 | magazine | 电子杂志 × 电子墨水 | 观点、故事、行业分享 | [Magazine](styles/magazine/guide.md) |
 | swiss | 瑞士国际主义 | 产品、事实、方法论 | [Swiss](styles/swiss/guide.md) |
+| modern-business（experimental） | 现代商务 | 方案汇报、项目复盘、产品介绍 | [定义卡](styles/modern-business/spec.md) / [指南](styles/modern-business/guide.md) |
 
-两者沿用上游已有风格。换配色不等于新增风格，复杂表格和长篇培训课件仍不属于当前强项。
+前两者沿用上游已有风格；现代商务新增独立的字号、圆角和模块规则，具体视觉待用户审阅。换配色不等于新增风格，复杂表格和长篇培训课件仍不属于当前强项。
 
 ## 安装与使用
 

@@ -85,6 +85,6 @@ test('new registered templates automatically participate in assembly', t => {
     ...original, id: 'new-style', name: 'New style', status: 'experimental', template: 'assets/new-template.html',
   }));
   const plan = planPresenterBuild(root);
-  assert.equal(plan.length, 3);
+  assert.equal(plan.length, new Set(loadStyles().map(style => style.template)).size + 1);
   assert.ok(plan.some(item => item.file === 'assets/new-template.html' && item.before === item.after));
 });

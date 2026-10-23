@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "modern-business",
+  "name": "现代商务",
+  "status": "experimental",
+  "runtime": "guizang-presenter-v1",
+  "template": "assets/template-modern-business.html",
+  "guide": "styles/modern-business/guide.md",
+  "spec": "styles/modern-business/spec.md",
+  "specRevision": "draft-01",
+  "layouts": "styles/modern-business/layouts.md",
+  "themes": "styles/modern-business/themes.md",
+  "rules": [],
+  "assets": [],
+  "validators": ["scripts/validate-modern-business-deck.mjs"]
+}

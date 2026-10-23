@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "style": "modern-business",
+  "runtime": "guizang-presenter-v1",
+  "title": "现代商务 · 六类代表页",
+  "template": "assets/template-modern-business.html",
+  "styleSpec": {
+    "source": "styles/modern-business/spec.md",
+    "revision": "draft-01",
+    "path": "style-spec.md",
+    "sha256": "bfd723740646576b06b109594d6305ec74f14c5ca31321fbeb2bf20f038645cc"
+  }
+}

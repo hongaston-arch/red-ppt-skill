@@ -1,0 +1,346 @@
+{
+  "browser": "155.0.8059.85",
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "served from supplied local UMD",
+  "measurements": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "mb-cover",
+      "layout": "MB01",
+      "bodySizes": [
+        30
+      ],
+      "titleSize": 80,
+      "maxTextBottom": 958.28125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "mb-long-title",
+      "layout": "MB02",
+      "bodySizes": [
+        30
+      ],
+      "titleSize": 80,
+      "maxTextBottom": 958.28125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "mb-body",
+      "layout": "MB03",
+      "bodySizes": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "titleSize": 80,
+      "maxTextBottom": 958.28125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "mb-evidence",
+      "layout": "MB04",
+      "bodySizes": [
+        30,
+        30
+      ],
+      "titleSize": 80,
+      "maxTextBottom": 958.28125,
+      "images": [
+        {
+          "role": "evidence",
+          "fit": "contain",
+          "width": 1800,
+          "height": 1000
+        }
+      ],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "mb-process",
+      "layout": "MB05",
+      "bodySizes": [
+        26.88,
+        26.88,
+        26.88,
+        26.88,
+        26.88
+      ],
+      "titleSize": 80,
+      "maxTextBottom": 958.28125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slideId": "mb-closing",
+      "layout": "MB06",
+      "bodySizes": [
+        30,
+        26.88,
+        26.88,
+        26.88
+      ],
+      "titleSize": 80,
+      "maxTextBottom": 958.28125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "mb-cover",
+      "layout": "MB01",
+      "bodySizes": [
+        25.6
+      ],
+      "titleSize": 67.2,
+      "maxTextBottom": 798.390625,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "mb-long-title",
+      "layout": "MB02",
+      "bodySizes": [
+        25.6
+      ],
+      "titleSize": 67.2,
+      "maxTextBottom": 798.390625,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "mb-body",
+      "layout": "MB03",
+      "bodySizes": [
+        25.6,
+        25.6,
+        25.6,
+        25.6
+      ],
+      "titleSize": 67.2,
+      "maxTextBottom": 798.390625,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "mb-evidence",
+      "layout": "MB04",
+      "bodySizes": [
+        25.6,
+        25.6
+      ],
+      "titleSize": 67.2,
+      "maxTextBottom": 798.390625,
+      "images": [
+        {
+          "role": "evidence",
+          "fit": "contain",
+          "width": 1800,
+          "height": 1000
+        }
+      ],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "mb-process",
+      "layout": "MB05",
+      "bodySizes": [
+        22.4,
+        22.4,
+        22.4,
+        22.4,
+        22.4
+      ],
+      "titleSize": 67.2,
+      "maxTextBottom": 798.390625,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slideId": "mb-closing",
+      "layout": "MB06",
+      "bodySizes": [
+        25.6,
+        22.4,
+        22.4,
+        22.4
+      ],
+      "titleSize": 67.2,
+      "maxTextBottom": 798.390625,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "mb-cover",
+      "layout": "MB01",
+      "bodySizes": [
+        20.48
+      ],
+      "titleSize": 53.76,
+      "maxTextBottom": 638.8125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "mb-long-title",
+      "layout": "MB02",
+      "bodySizes": [
+        20.48
+      ],
+      "titleSize": 53.76,
+      "maxTextBottom": 638.8125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "mb-body",
+      "layout": "MB03",
+      "bodySizes": [
+        20.48,
+        20.48,
+        20.48,
+        20.48
+      ],
+      "titleSize": 53.76,
+      "maxTextBottom": 638.8125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "mb-evidence",
+      "layout": "MB04",
+      "bodySizes": [
+        20.48,
+        20.48
+      ],
+      "titleSize": 53.76,
+      "maxTextBottom": 638.8125,
+      "images": [
+        {
+          "role": "evidence",
+          "fit": "contain",
+          "width": 1800,
+          "height": 1000
+        }
+      ],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "mb-process",
+      "layout": "MB05",
+      "bodySizes": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "titleSize": 53.76,
+      "maxTextBottom": 638.8125,
+      "images": [],
+      "issues": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slideId": "mb-closing",
+      "layout": "MB06",
+      "bodySizes": [
+        20.48,
+        20,
+        20,
+        20
+      ],
+      "titleSize": 53.76,
+      "maxTextBottom": 638.8125,
+      "images": [],
+      "issues": []
+    }
+  ],
+  "interactions": [
+    "1920x1080: six pages, navigation, overview, low-power visibility",
+    "1600x900: six pages, navigation, overview, low-power visibility",
+    "1280x720: six pages, navigation, overview, low-power visibility",
+    "1280x720: early static mode before deferred entry completes",
+    "1920x1080: presenter/audience sync, end restart, timer start/pause/reset, grid select, notes by ID, audience close/reopen"
+  ],
+  "pageErrors": [],
+  "faultChecks": [
+    "outside modern content zone",
+    "body smaller",
+    "candidate radius",
+    "evidence cover"
+  ],
+  "passed": true
+}
