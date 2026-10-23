@@ -1,0 +1,111 @@
+{
+  "rendered": true,
+  "safety": [
+    {
+      "index": 0,
+      "id": "review-cover",
+      "layout": "SWISS-COVER-ASCII",
+      "width": 1280,
+      "height": 720,
+      "contentBottom": 652.90625,
+      "safeBottom": 669.6,
+      "navGap": 46.703125,
+      "boxes": 8,
+      "issues": []
+    },
+    {
+      "index": 1,
+      "id": "review-long-title",
+      "layout": "S03",
+      "width": 1280,
+      "height": 720,
+      "contentBottom": 652.90625,
+      "safeBottom": 669.6,
+      "navGap": 46.703125,
+      "boxes": 12,
+      "issues": []
+    },
+    {
+      "index": 2,
+      "id": "review-body",
+      "layout": "S19",
+      "width": 1280,
+      "height": 720,
+      "contentBottom": 652.90625,
+      "safeBottom": 669.6,
+      "navGap": 46.703125,
+      "boxes": 24,
+      "issues": []
+    },
+    {
+      "index": 3,
+      "id": "review-image",
+      "layout": "S22",
+      "width": 1280,
+      "height": 720,
+      "contentBottom": 584.984375,
+      "safeBottom": 669.6,
+      "navGap": 114.625,
+      "boxes": 17,
+      "issues": []
+    },
+    {
+      "index": 4,
+      "id": "review-process",
+      "layout": "S11",
+      "width": 1280,
+      "height": 720,
+      "contentBottom": 652.90625,
+      "safeBottom": 669.6,
+      "navGap": 46.703125,
+      "boxes": 16,
+      "issues": []
+    },
+    {
+      "index": 5,
+      "id": "review-closing",
+      "layout": "S10",
+      "width": 1280,
+      "height": 720,
+      "contentBottom": 652.90625,
+      "safeBottom": 669.6,
+      "navGap": 46.703125,
+      "boxes": 20,
+      "issues": []
+    }
+  ],
+  "images": [
+    {
+      "slide": 4,
+      "source": "images/structure-21x9.svg",
+      "role": "",
+      "loaded": true,
+      "naturalWidth": 2100,
+      "naturalHeight": 900,
+      "width": 1280,
+      "height": 432,
+      "fit": "contain",
+      "position": "50% 50%"
+    }
+  ],
+  "browser": "155.0.8059.85",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "supplied local UMD",
+  "errors": [],
+  "warnings": [
+    "Slide 2 (S03): M2 h2 \"把长句拆成两个清楚的意思。\" has 22px gap before .review-body \"左侧承载主张，右侧解释含义。这里检查中文换行与字重，不添加数据或并列卡片。\" (min 32px).",
+    "Slide 3 (S19): M2 h2 \"风格是什么\" has 22px gap before .review-body \"写清字体、颜色与信息层级。描述页面如何组织内容，使下一次制作有可核对的依据。\" (min 32px).",
+    "Slide 3 (S19): M2 h2 \"哪些能调整\" has 22px gap before .review-body \"区分固定骨架与局部调整。文案变长时先改写或拆页，保留正文可读性与必要留白。\" (min 32px).",
+    "Slide 3 (S19): M2 h2 \"如何做判断\" has 22px gap before .review-body \"把来源规则、建议与已确认决定分开记录。样张用于检验效果，不能代替事实来源。\" (min 32px).",
+    "Slide 3 (S19): M2 h2 \"怎样接着做\" has 22px gap before .review-body \"保存规格版本、素材出处与检查记录。新聊天先读取项目文件，再继续尚未完成的工作。\" (min 32px).",
+    "Slide 6 (S10): M2 .review-split-title \"继续扩展保留依据\" has 22px gap before .review-body \"让每次调整都有范围，让下次交流有据可循。\" (min 32px).",
+    "Slide 6 (S10): M2 h2 \"保留清晰的骨架\" has 10px gap before .review-body \"每页先确定信息角色，再选择登记版式。\" (min 32px).",
+    "Slide 6 (S10): M2 h2 \"展示实际的效果\" has 10px gap before .review-body \"使用代表页核对标题、正文、图片和流程。\" (min 32px).",
+    "Slide 6 (S10): M2 h2 \"留下可恢复的记录\" has 10px gap before .review-body \"确认范围与检查结果分别保存，方便下次继续。\" (min 32px)."
+  ],
+  "passed": true
+}

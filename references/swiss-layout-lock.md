@@ -63,7 +63,7 @@
 - 生成提示词必须包含: `21:9 ultra-wide strip`, `subject centered in the safe middle area`, `no title, no footer, no page chrome, no logo, no border`.
 - HTML 容器必须使用原始 S22 的顶部全宽图骨架;不要改成普通居中大图。
 - 照片用 `object-fit:cover;object-position:center 35%`。如果是人像/会议场景,不要用 `top center`。
-- 信息图/UI 截图如果放 S22,必须重新生成接近 `21:9`,并用 `object-fit:contain` 或保证核心内容在中央 70% 安全区。
+- 原始UI/代码/证据截图放S22时保留原文件与关键文字，必要时`object-fit:contain`，不为21:9重画数据。按槽位新生成的情景插图才使用21:9；照片可按明确主体采用cover，并核对裁切与标题遮挡。原始素材比例与槽位比例分别记录（Q07确认方向）。
 
 ### S15/S16 · Multi Image Grid
 

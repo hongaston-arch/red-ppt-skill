@@ -1,13 +1,21 @@
 #!/usr/bin/env node
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { pathToFileURL } from 'node:url';
+import { parseArgs } from 'node:util';
+import { measureSwissSafety, fitImage } from './lib/swiss-safety.mjs';
 
-const file = process.argv[2];
-const allowExperimental = process.argv.includes('--allow-experimental');
+const { values, positionals } = parseArgs({ allowPositionals: true, options: {
+  'allow-experimental': { type: 'boolean' }, 'require-browser': { type: 'boolean' },
+  'playwright-module': { type: 'string' }, chrome: { type: 'string' }, report: { type: 'string' },
+  width: { type: 'string', default: '1600' }, height: { type: 'string', default: '900' },
+  url: { type: 'string' }, 'system-fonts': { type: 'boolean' }, 'lucide-umd': { type: 'string' },
+} });
+const file = positionals[0];
+const allowExperimental = values['allow-experimental'];
 
-if (!file) {
+if (!file || positionals.length !== 1) {
   console.error('Usage: node scripts/validate-swiss-deck.mjs <index.html> [--allow-experimental]');
   process.exit(2);
 }
@@ -16,6 +24,9 @@ const html = readFileSync(file, 'utf8');
 const htmlForSlides = html.replace(/<!--[\s\S]*?-->/g, '');
 const errors = [];
 const warnings = [];
+const report = { rendered: false, safety: [], images: [] };
+const viewport = { width: Number(values.width), height: Number(values.height) };
+if (![viewport.width,viewport.height].every(n=>Number.isInteger(n)&&n>0)) throw new Error('Viewport dimensions must be positive integers.');
 
 function overflowFix(px) {
   const n = Math.round(px);
@@ -26,6 +37,7 @@ function overflowFix(px) {
 }
 
 async function loadPlaywright() {
+  if (values['playwright-module']) return import(pathToFileURL(path.resolve(values['playwright-module'])).href);
   const candidates = [
     createRequire(import.meta.url),
     createRequire(pathToFileURL(path.join(process.cwd(), 'package.json')).href),
@@ -136,26 +148,69 @@ async function runRenderedMeasurements() {
   const playwright = await loadPlaywright();
   if (!playwright?.chromium) {
     warnings.push('Rendered measurement skipped: Playwright is not resolvable from the skill folder or current project. Static Swiss checks still ran.');
+    if (values['require-browser']) errors.push('Browser measurement is required but Playwright is unavailable.');
     return;
   }
 
   const browser = await playwright.chromium.launch({
+    ...(values.chrome ? { executablePath: values.chrome } : {}),
     args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'],
   });
   try {
     const ctx = await browser.newContext({
-      viewport: { width: 1600, height: 900 },
+      viewport,
       deviceScaleFactor: 1,
     });
+    if (values['system-fonts']) await ctx.route(/https:\/\/fonts\.(googleapis|gstatic)\.com\//, route=>route.abort());
+    if (values['lucide-umd']) await ctx.route(/https:\/\/unpkg\.com\/lucide[^/]*\//,
+      route=>route.fulfill({path:path.resolve(values['lucide-umd']),contentType:'application/javascript'}));
     const page = await ctx.newPage();
-    await page.goto(pathToFileURL(path.resolve(file)).href, { waitUntil: 'domcontentloaded' });
+    if (values.url) {
+      const response = await fetch(values.url);
+      if (!response.ok || await response.text() !== html) throw new Error('Served URL does not match the exact local HTML being validated.');
+    }
+    await page.goto(values.url || pathToFileURL(path.resolve(file)).href, { waitUntil: 'domcontentloaded' });
     await Promise.race([
       page.evaluate(() => document.fonts && document.fonts.ready),
       page.waitForTimeout(1800),
     ]);
+    await page.evaluate(()=>window.__setLowPowerMode?.(true,{persist:false}));
     await page.waitForTimeout(800);
+    report.rendered = true;
+    report.browser = await browser.version(); report.viewport = viewport;
+    report.fontMode = values['system-fonts'] ? 'system fallback; Google Fonts blocked' : 'normal loading';
+    report.lucideMode = values['lucide-umd'] ? 'supplied local UMD' : 'normal loading';
+    const count = await page.locator('#deck > .slide').count();
+    if (count!==slides.length) errors.push(`Rendered deck contains ${count} slides; static source contains ${slides.length}.`);
+    for (let index=0;index<count;index++) {
+      await page.evaluate(i=>{ go(i,{force:true}); },index);
+      await page.waitForTimeout(800);
+      const measurement = await page.evaluate(measureSwissSafety,{index});
+      report.safety.push(measurement);
+      errors.push(...measurement.issues.map(issue=>`Slide ${index+1} (${measurement.layout}): ${issue}`));
+      const images = await page.locator('#deck > .slide').nth(index).locator('img').evaluateAll(nodes=>nodes.map(img=>{
+        const css=getComputedStyle(img), r=img.getBoundingClientRect();
+        return { source:img.getAttribute('src'),role:img.dataset.imageRole||'',loaded:img.complete&&img.naturalWidth>0,
+          naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight,
+          width:r.width-parseFloat(css.borderLeftWidth)-parseFloat(css.borderRightWidth)-parseFloat(css.paddingLeft)-parseFloat(css.paddingRight),
+          height:r.height-parseFloat(css.borderTopWidth)-parseFloat(css.borderBottomWidth)-parseFloat(css.paddingTop)-parseFloat(css.paddingBottom),
+          fit:css.objectFit,position:css.objectPosition,subject:img.dataset.subjectBox?.split(',').map(Number) };
+      }));
+      for (const img of images) {
+        const item={slide:index+1,...img}; report.images.push(item);
+        if (!img.loaded) { errors.push(`Slide ${index+1}: image failed to load: ${img.source}`); continue; }
+        if (!['evidence','photo','illustration'].includes(img.role)) continue;
+        const positions=img.position.split(/\s+/);
+        if (!['contain','cover'].includes(img.fit) || positions.length!==2 || !positions.every(p=>/^[-\d.]+%$/.test(p))) {
+          warnings.push(`Slide ${index+1}: image policy needs manual review for ${img.fit}/${img.position}.`); continue;
+        }
+        item.geometry=fitImage({...img,positionX:parseFloat(positions[0])/100,positionY:parseFloat(positions[1])/100});
+        if (img.role==='evidence' && !item.geometry.fullImage) errors.push(`Slide ${index+1}: evidence image is cropped: ${img.source}`);
+        if (item.geometry.subjectVisible===false) errors.push(`Slide ${index+1}: declared image subject is cropped: ${img.source}`);
+      }
+    }
 
-    const measures = await page.$$eval('section.slide', (els) => {
+    const measures = await page.$$eval('#deck > .slide', (els) => {
       const TRANSPARENT = /rgba?\(\s*0\s*,\s*0\s*,\s*0\s*,\s*0?\s*\)|transparent/;
       const titleSelector = [
         '.h-hero', '.h-hero-zh', '.h-xl', '.h-xl-zh', '.h-statement',
@@ -298,9 +353,6 @@ async function runRenderedMeasurements() {
       if (m.visual.topOverflow > 4) {
         errors.push(`${prefix}: M1 visual top overflow ${m.visual.topOverflow}px; highest element is ${m.visual.topNode}. Move content down by the measured overflow plus 16-24px.`);
       }
-      if (m.visual.bottom > m.visual.safeBottom) {
-        warnings.push(`${prefix}: M1 content reaches ${Math.round(m.visual.bottom)}px; nav-safe line is ${m.visual.safeBottom}px. Lift the lowest block or add .nav-safe-bottom.`);
-      }
       if (m.visual.bottomGap > 170 && m.visual.activeRatio < 0.74) {
         warnings.push(`${prefix}: M1 bottom whitespace ${m.visual.bottomGap}px; active content height ${Math.round(m.visual.activeRatio * 100)}%. Restore spacing/content instead of over-correcting overflow.`);
       }
@@ -313,7 +365,9 @@ async function runRenderedMeasurements() {
   }
 }
 
-await runRenderedMeasurements();
+try { await runRenderedMeasurements(); }
+catch (error) { errors.push(`Browser measurement failed: ${error.message}`); }
+if (values.report) writeFileSync(values.report,JSON.stringify({...report,errors,warnings,passed:!errors.length},null,2)+'\n',{flag:'wx'});
 
 if (warnings.length) {
   console.warn('Warnings:');

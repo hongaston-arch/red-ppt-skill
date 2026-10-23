@@ -4,11 +4,11 @@
 
 [English](README.en.md) · [使用入口](SKILL.md) · [风格包契约](docs/style-packs.md) · [维护流程](docs/maintenance.md)
 
-新聊天先读 [CONTEXT.md](CONTEXT.md)。风格确定按 [确认流程](docs/style-confirmation.md) 执行；[Swiss定义卡 draft-05](styles/swiss/spec.md) 已记录来源、冲突和确认；Q01–Q05方向已确定，S15及六类代表页的答复限本轮展示范围；Q06/Q07按确认方案继续验证。有规格的风格会在生成目录保存规格快照，便于后续聊天核对创作依据。
+新聊天先读 [CONTEXT.md](CONTEXT.md)。风格确定按 [确认流程](docs/style-confirmation.md) 执行；[Swiss定义卡 draft-06](styles/swiss/spec.md) 已记录来源、冲突和确认；Q01–Q05方向已确定，S15及六类代表页的答复限本轮展示范围；Q06/Q07按确认方案继续验证。有规格的风格会在生成目录保存规格快照，便于后续聊天核对创作依据。
 
 ## 当前状态
 
-首批基础改造：登记原有两种风格，提供初始化与校验命令；已补齐Swiss S15与六类代表页。当前独立分支进一步提取[共享演讲者源](docs/presenter-runtime.md)，保留预组装HTML与既有使用方法；普通导航、通用测量与第三种风格尚未完成。工作分支需经PR审查后合并main，当前说明不代表稳定版已发布。
+首批基础改造：登记原有两种风格，提供初始化与校验命令；已补齐Swiss S15与六类代表页。当前独立分支进一步提取[共享演讲者源](docs/presenter-runtime.md)，保留预组装HTML与既有使用方法；Swiss安全区测量与原图处理检查已接入；普通导航提取、其他风格测量与第三种风格尚未完成。工作分支需经PR审查后合并main，当前说明不代表稳定版已发布。
 
 | 风格 ID | 名称 | 适用内容 | 指南 |
 |---|---|---|---|

@@ -1,0 +1,103 @@
+{
+  "rendered": true,
+  "safety": [
+    {
+      "index": 0,
+      "id": "image-evidence",
+      "layout": "S22",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 696.484375,
+      "safeBottom": 837,
+      "navGap": 179.515625,
+      "boxes": 14,
+      "issues": []
+    },
+    {
+      "index": 1,
+      "id": "image-photo",
+      "layout": "S22",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 696.484375,
+      "safeBottom": 837,
+      "navGap": 179.515625,
+      "boxes": 14,
+      "issues": []
+    }
+  ],
+  "images": [
+    {
+      "slide": 1,
+      "source": "images/registry-original.png",
+      "role": "evidence",
+      "loaded": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1000,
+      "width": 1600,
+      "height": 540,
+      "fit": "cover",
+      "position": "50% 50%",
+      "geometry": {
+        "scale": 0.8888888888888888,
+        "left": 0,
+        "top": -174.4444444444444,
+        "renderedWidth": 1600,
+        "renderedHeight": 888.8888888888888,
+        "visible": {
+          "left": 0,
+          "top": 196.24999999999997,
+          "right": 1800,
+          "bottom": 803.7499999999999
+        },
+        "fullImage": false,
+        "subjectVisible": null
+      }
+    },
+    {
+      "slide": 2,
+      "source": "images/earthrise-original.jpg",
+      "role": "photo",
+      "loaded": true,
+      "naturalWidth": 3000,
+      "naturalHeight": 3000,
+      "width": 1600,
+      "height": 540,
+      "fit": "cover",
+      "position": "50% 65%",
+      "subject": [
+        0.48,
+        0.45,
+        0.18,
+        0.14
+      ],
+      "geometry": {
+        "scale": 0.5333333333333333,
+        "left": 0,
+        "top": -689,
+        "renderedWidth": 1600,
+        "renderedHeight": 1600,
+        "visible": {
+          "left": 0,
+          "top": 1291.875,
+          "right": 3000,
+          "bottom": 2304.375
+        },
+        "fullImage": false,
+        "subjectVisible": true
+      }
+    }
+  ],
+  "browser": "155.0.8059.85",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "supplied local UMD",
+  "errors": [
+    "Slide 1: evidence image is cropped: images/registry-original.png"
+  ],
+  "warnings": [],
+  "passed": false
+}

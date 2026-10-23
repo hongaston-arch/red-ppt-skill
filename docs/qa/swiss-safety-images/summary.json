@@ -1,0 +1,138 @@
+{
+  "positive": [
+    {
+      "label": "representative",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slides": 6,
+      "minNavGap": 71.890625,
+      "sha256": "ed00268a69db59f0d2e70fc13b50ea7e67a05fcabd7ea7b6985e68a9070bb79c"
+    },
+    {
+      "label": "representative",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slides": 6,
+      "minNavGap": 59.296875,
+      "sha256": "ed00268a69db59f0d2e70fc13b50ea7e67a05fcabd7ea7b6985e68a9070bb79c"
+    },
+    {
+      "label": "representative",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slides": 6,
+      "minNavGap": 46.703125,
+      "sha256": "ed00268a69db59f0d2e70fc13b50ea7e67a05fcabd7ea7b6985e68a9070bb79c"
+    },
+    {
+      "label": "s15",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slides": 2,
+      "minNavGap": 71.984375,
+      "sha256": "e911aae69c2c0670b1a5252ac5b28402a5184b42e6cad210a13a1dc774f3db1a"
+    },
+    {
+      "label": "s15",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slides": 2,
+      "minNavGap": 59.390625,
+      "sha256": "e911aae69c2c0670b1a5252ac5b28402a5184b42e6cad210a13a1dc774f3db1a"
+    },
+    {
+      "label": "s15",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slides": 2,
+      "minNavGap": 46.796875,
+      "sha256": "e911aae69c2c0670b1a5252ac5b28402a5184b42e6cad210a13a1dc774f3db1a"
+    },
+    {
+      "label": "images",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "slides": 2,
+      "minNavGap": 221.703125,
+      "sha256": "a8e8a9bb375e255f7ad49a593b6135eb2262d828912d9ea1283da2d9c28d9797"
+    },
+    {
+      "label": "images",
+      "viewport": {
+        "width": 1600,
+        "height": 900
+      },
+      "slides": 2,
+      "minNavGap": 179.515625,
+      "sha256": "a8e8a9bb375e255f7ad49a593b6135eb2262d828912d9ea1283da2d9c28d9797"
+    },
+    {
+      "label": "images",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "slides": 2,
+      "minNavGap": 138.359375,
+      "sha256": "a8e8a9bb375e255f7ad49a593b6135eb2262d828912d9ea1283da2d9c28d9797"
+    }
+  ],
+  "negative": [
+    {
+      "label": "nav-gap",
+      "rejected": true,
+      "errors": [
+        "Slide 1 (S15): navigation clearance: 14.39px < 16px",
+        "Slide 2 (S15): navigation clearance: 14.39px < 16px"
+      ]
+    },
+    {
+      "label": "safe-line",
+      "rejected": true,
+      "errors": [
+        "Slide 1 (S15): 93vh exceeded: 856.61px > 837.00px",
+        "Slide 2 (S15): 93vh exceeded: 856.61px > 837.00px"
+      ]
+    },
+    {
+      "label": "evidence-crop",
+      "rejected": true,
+      "errors": [
+        "Slide 1: evidence image is cropped: images/registry-original.png"
+      ]
+    },
+    {
+      "label": "photo-crop",
+      "rejected": true,
+      "errors": [
+        "Slide 2: declared image subject is cropped: images/earthrise-original.jpg"
+      ]
+    },
+    {
+      "label": "missing-image",
+      "rejected": true,
+      "errors": [
+        "Slide 1: image failed to load: images/missing.png"
+      ]
+    }
+  ],
+  "screenshots": [
+    "evidence-contain.png",
+    "photo-cover.png"
+  ],
+  "passed": true
+}

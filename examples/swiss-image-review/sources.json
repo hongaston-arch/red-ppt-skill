@@ -1,0 +1,36 @@
+{
+  "screenshot": {
+    "file": "images/registry-original.png",
+    "source": "images/registry-source.html",
+    "viewport": {
+      "width": 1800,
+      "height": 1000
+    },
+    "sha256": "6f64c7517368ff509e72d8864960d1ddab137cdae28669c15a3e777b0a292368",
+    "registered": [
+      {
+        "id": "magazine",
+        "runtime": "guizang-presenter-v1"
+      },
+      {
+        "id": "swiss",
+        "runtime": "guizang-presenter-v1"
+      }
+    ]
+  },
+  "photo": {
+    "file": "images/earthrise-original.jpg",
+    "source": "https://science.nasa.gov/resource/apollo-8s-iconic-earthrise/",
+    "download": "https://assets.science.nasa.gov/content/dam/science/psd/solar/2023/09/a/as08-14-2383-1.jpg",
+    "credit": "NASA/Bill Anders",
+    "usage": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "sha256": "4b1484e9bb55652e30a56c03c27141938885a09e4b3c0bcabb8841e1e94ed9d9",
+    "subjectBox": [
+      0.48,
+      0.45,
+      0.18,
+      0.14
+    ],
+    "subjectBasis": "Assistant inspected the original image and selected a padded Earth bounding box; not automatic object recognition."
+  }
+}

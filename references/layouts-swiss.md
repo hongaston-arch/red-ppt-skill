@@ -148,10 +148,12 @@ chrome-min(页眉)、主体内容、底部 footnote 都是 canvas-card 的子元
 **5. 底部分页安全区:主内容最低处不要触及 nav**
 底部分页 dot 固定在 `bottom:2vh`,视觉上占据约 `93vh` 之后的区域。主内容、图片 caption、图表说明、timeline label 的最低处必须停在安全区上方。
 
+Q06按已确认方案检查两项：内容不得越93vh，且与实际可见导航的垂直间距至少16px；缺失/隐藏导航不能记为间距通过。Swiss校验器逐页定位后测量，排除全高背景，仅检查文字与内容图形。模板8vh留白不等同于这两个测量阈值。
+
 - 模板提供 `--nav-safe-bottom:8vh`,可用 `.nav-safe-bottom` / `.nav-safe-bottom-tight`
 - P23 使用 `.swiss-img-split.align-image-bottom` 时,模板会自动给底部加安全区,避免图片 caption 被分页组件挡住
 - 如果为某页手写 `align-items:end` / `margin-top:auto` / `position:absolute;bottom:...`,必须肉眼检查最低处是否越过 nav
-- 视觉自检:打开页面到该页,确认内容最低边缘与分页 dot 之间至少有 `3vh` 呼吸空间
+- 视觉建议:可保留约3vh呼吸空间；工程下限按93vh与实际导航16px同时检查，不将建议值混成另一硬阈值
 
 ---
 

@@ -1,0 +1,101 @@
+{
+  "rendered": true,
+  "safety": [
+    {
+      "index": 0,
+      "id": "image-evidence",
+      "layout": "S22",
+      "width": 1280,
+      "height": 720,
+      "contentBottom": 561.25,
+      "safeBottom": 669.6,
+      "navGap": 138.359375,
+      "boxes": 14,
+      "issues": []
+    },
+    {
+      "index": 1,
+      "id": "image-photo",
+      "layout": "S22",
+      "width": 1280,
+      "height": 720,
+      "contentBottom": 561.25,
+      "safeBottom": 669.6,
+      "navGap": 138.359375,
+      "boxes": 14,
+      "issues": []
+    }
+  ],
+  "images": [
+    {
+      "slide": 1,
+      "source": "images/registry-original.png",
+      "role": "evidence",
+      "loaded": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1000,
+      "width": 1280,
+      "height": 432,
+      "fit": "contain",
+      "position": "50% 50%",
+      "geometry": {
+        "scale": 0.432,
+        "left": 251.2,
+        "top": 0,
+        "renderedWidth": 777.6,
+        "renderedHeight": 432,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1800,
+          "bottom": 1000
+        },
+        "fullImage": true,
+        "subjectVisible": null
+      }
+    },
+    {
+      "slide": 2,
+      "source": "images/earthrise-original.jpg",
+      "role": "photo",
+      "loaded": true,
+      "naturalWidth": 3000,
+      "naturalHeight": 3000,
+      "width": 1280,
+      "height": 432,
+      "fit": "cover",
+      "position": "50% 65%",
+      "subject": [
+        0.48,
+        0.45,
+        0.18,
+        0.14
+      ],
+      "geometry": {
+        "scale": 0.4266666666666667,
+        "left": 0,
+        "top": -551.2,
+        "renderedWidth": 1280,
+        "renderedHeight": 1280,
+        "visible": {
+          "left": 0,
+          "top": 1291.875,
+          "right": 3000,
+          "bottom": 2304.375
+        },
+        "fullImage": false,
+        "subjectVisible": true
+      }
+    }
+  ],
+  "browser": "155.0.8059.85",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "supplied local UMD",
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

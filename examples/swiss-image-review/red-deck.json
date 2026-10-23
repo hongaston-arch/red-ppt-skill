@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "style": "swiss",
+  "runtime": "guizang-presenter-v1",
+  "title": "Swiss · 截图保真与照片主体",
+  "template": "assets/template-swiss.html",
+  "styleSpec": {
+    "source": "styles/swiss/spec.md",
+    "revision": "draft-06",
+    "path": "style-spec.md",
+    "sha256": "f36a70a49fc8b4c9354e4194102f86b948cd9ec66c0ffebad56fd299acd01a18"
+  }
+}

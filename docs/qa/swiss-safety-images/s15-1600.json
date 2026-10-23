@@ -1,0 +1,40 @@
+{
+  "rendered": true,
+  "safety": [
+    {
+      "index": 0,
+      "id": "matrix-8",
+      "layout": "S15",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 816.609375,
+      "safeBottom": 837,
+      "navGap": 59.390625,
+      "boxes": 31,
+      "issues": []
+    },
+    {
+      "index": 1,
+      "id": "matrix-12",
+      "layout": "S15",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 816.609375,
+      "safeBottom": 837,
+      "navGap": 59.390625,
+      "boxes": 43,
+      "issues": []
+    }
+  ],
+  "images": [],
+  "browser": "155.0.8059.85",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "supplied local UMD",
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

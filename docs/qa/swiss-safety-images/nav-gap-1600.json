@@ -1,0 +1,47 @@
+{
+  "rendered": true,
+  "safety": [
+    {
+      "index": 0,
+      "id": "matrix-8",
+      "layout": "S15",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 816.609375,
+      "safeBottom": 837,
+      "navGap": 14.390625,
+      "boxes": 31,
+      "issues": [
+        "navigation clearance: 14.39px < 16px"
+      ]
+    },
+    {
+      "index": 1,
+      "id": "matrix-12",
+      "layout": "S15",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 816.609375,
+      "safeBottom": 837,
+      "navGap": 14.390625,
+      "boxes": 43,
+      "issues": [
+        "navigation clearance: 14.39px < 16px"
+      ]
+    }
+  ],
+  "images": [],
+  "browser": "155.0.8059.85",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "supplied local UMD",
+  "errors": [
+    "Slide 1 (S15): navigation clearance: 14.39px < 16px",
+    "Slide 2 (S15): navigation clearance: 14.39px < 16px"
+  ],
+  "warnings": [],
+  "passed": false
+}

@@ -2,7 +2,7 @@
 
 ## 恢复入口
 
-先核对 `git status --short --branch` 与 `git remote -v`，再读取本文件。仓库为 `hongaston-arch/red-ppt-skill`；基础改造在`feat/style-registry-foundation`草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)。当前分支`codex/shared-presenter-runtime`依赖该分支的`5f23ed2`提交，另走独立草稿[PR #2](https://github.com/hongaston-arch/red-ppt-skill/pull/2)，目标暂为基础分支。实际分支与合并状态仍以GitHub查询为准；基础PR合并后，再评估重新定基与改目标到main，不自动合并。
+先核对`git status --short --branch`与`git remote -v`，再读本文件。仓库为`hongaston-arch/red-ppt-skill`；基础改造在`feat/style-registry-foundation`草稿[PR #1](https://github.com/hongaston-arch/red-ppt-skill/pull/1)，共享演讲者源在`codex/shared-presenter-runtime`草稿[PR #2](https://github.com/hongaston-arch/red-ppt-skill/pull/2)。当前`codex/swiss-safety-images`从PR #2的`2ac5efb`创建，另提交依赖它的草稿PR，编号以GitHub查询为准。各草稿均不自动合并；前序审查后再评估重新定基与改目标。
 
 ## 用户目标与已作决定
 
@@ -15,11 +15,11 @@
 
 已有：两个继承风格注册、初始化/校验工具、Swiss S15及六类样张；Q01–Q05确定，Q06/Q07按方案继续验证。本分支新增runtime/presenter.css与presenter.js单一维护源、组装/检查命令与运行时集成检查；两个模板保留内嵌代码，与提取前字节一致。普通导航、各风格动效与通用布局测量没有在本轮提取。
 
-本次：确认流程、规格模板、Swiss `draft-05` 定义卡、项目记录模板、读取顺序及规格快照。Q04/Q05全局范围获明确答复，Q06/Q07按方案继续验证。入口见 [确认流程](docs/style-confirmation.md)；Swiss 的唯一规格入口为 [spec.md](styles/swiss/spec.md)。具体规则和冲突只在那里维护，本文件不复制其内容。
+本次：Swiss `draft-06`，Q06安全区接入和Q07原图处理检查已完成所列条件的工程验证。新增examples/swiss-image-review两页；照片原文件、截图原HTML/PNG与摘要均保留，新样页尚未获用户视觉确认。具体规则只维护在[spec.md](styles/swiss/spec.md)，确认流程见docs/style-confirmation.md。
 
-尚未完成：Q06方案的通用测量接入、Q07真实截图/照片验证、跨平台/投影验收、普通导航的共享源提取、第三种风格、稳定发布与分支保护。历史QA与规格快照保留生成时状态，后续用户决定查当前Swiss规格，不从旧QA中的“待确认”倒推当前状态。之前的CI通过不代表新提交通过，每次结束报告实际检查。
+尚未完成：全部Swiss版式、密集业务截图/人像、跨平台/投影验收、普通导航源提取、第三种风格、稳定发布与分支保护。图片检查依赖作者角色和人工主体框，不自动理解图片或所有遮挡。历史QA与规格快照保留生成时状态，后续决定查当前规格。CI以实际提交为准。
 
-本分支验证记录见docs/qa/presenter-source.md：新增6项源组装测试，完整26项Node检查；两风格1600×900及1280×720的翻页/总览/低功耗、演讲者同步、备注、计时、观众关闭恢复通过。模板字节比较、源同步与静态演讲者检查分别记录。前轮Swiss三视口记录仍见docs/qa/swiss-s15.md与swiss-representative.md；不将各记录未测项写成通过，CI以最新提交为准。
+当前验证见docs/qa/swiss-safety-images.md：32项Node测试；10页×3视口安全区、图片几何与5个故障反例通过，最小导航间距46.70px。静态模式早期丢标签已在新样页修复并加入可见性断言；两模板和共享源未改。前轮演讲者交互见docs/qa/presenter-source.md，未重测项目不扩大为本轮通过。
 
 ## 新聊天如何继续
 
@@ -31,7 +31,7 @@
 
 ## 下一步
 
-完成两份草稿PR的审查；Q06/Q07按确认方向继续测量接入与真实素材样张验证。新风格另做定义卡与experimental包，不将Swiss规则推广到其他风格。用户已担心视觉选择数量，后续扩展不局限于两种配色，但暂不并行铺开多套。既有确认无需重问；当前草稿不自动合并或发布。
+审阅新增图片样页与各草稿PR；第三种风格按docs/proposals/next-style.md确认优先方向，建议现代商务，另有暗色发布与终端技术讲解候选。该文档仅提案，尚未注册新包或实现新模板。确认后独立分支制作完整定义卡与六类样张，不把Swiss限制复制过去；不重复询问已有决定，不自动合并或发布。
 
 ## 新聊天启动语
 
