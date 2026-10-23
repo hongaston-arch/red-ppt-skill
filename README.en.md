@@ -4,11 +4,11 @@ A multi-style HTML presentation skill forked from [Guizang PPT Skill](https://gi
 
 [中文](README.md) · [Style package contract](docs/style-packs.md) · [Maintenance](docs/maintenance.md)
 
-For a new chat, start with [CONTEXT.md](CONTEXT.md). The [confirmation workflow](docs/style-confirmation.md) and [Swiss draft specification](styles/swiss/spec.md) distinguish inherited rules, proposals, user decisions, and verification. Direction decisions Q01–Q03 are confirmed, including a four-column, three-row S15 matrix; sample approval remains pending. Styles with a registered specification preserve a checksummed snapshot in each new deck.
+For a new chat, start with [CONTEXT.md](CONTEXT.md). The [confirmation workflow](docs/style-confirmation.md) and [Swiss specification](styles/swiss/spec.md) separate sources, proposals, decisions, and tests. Q01–Q05 are confirmed; Q06/Q07 have an agreed direction for further verification. Responses to S15 and six representative pages cover only the examples shown. Each new deck preserves its registered specification as a checksummed snapshot.
 
 ## Current scope
 
-This foundation registers the inherited `magazine` and `swiss` styles and adds scaffolding and validation commands. The templates and presenter runtime are inherited; this branch adds scoped Swiss S15 matrix components and a four-column animation. The presenter runtime remains unchanged. Shared runtime source extraction and a third style are future work, not completed features.
+The foundation registers `magazine` and `swiss`, adds scaffolding and validation, and provides S15 plus six representative Swiss pages. This dependent branch extracts [shared presenter source](docs/presenter-runtime.md) while preserving both preassembled templates byte for byte. Users need no build step. Ordinary navigation, general layout measurement, and a third style remain future work; this branch has not been released to stable main.
 
 After this branch is reviewed and merged, install the stable main branch:
 

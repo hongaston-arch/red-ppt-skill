@@ -19,5 +19,6 @@ jobs:
       - run: node scripts/styles.mjs --check
       - run: node --test tests/*.test.mjs
       - run: node scripts/check-presenter-runtime-sync.mjs
+      - run: node scripts/build-presenter-runtime.mjs --check
       - run: node scripts/validate-presenter-mode.mjs assets/template.html
       - run: node scripts/validate-presenter-mode.mjs assets/template-swiss.html

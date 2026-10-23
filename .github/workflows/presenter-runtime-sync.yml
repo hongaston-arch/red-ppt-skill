@@ -5,12 +5,22 @@ on:
     paths:
       - "assets/template*.html"
       - "scripts/check-presenter-runtime-sync.mjs"
+      - "scripts/build-presenter-runtime.mjs"
+      - "scripts/lib/presenter-runtime.mjs"
+      - "scripts/lib/styles.mjs"
+      - "runtime/**"
+      - "styles/**/style.json"
       - ".github/workflows/presenter-runtime-sync.yml"
   push:
     branches: [main]
     paths:
       - "assets/template*.html"
       - "scripts/check-presenter-runtime-sync.mjs"
+      - "scripts/build-presenter-runtime.mjs"
+      - "scripts/lib/presenter-runtime.mjs"
+      - "scripts/lib/styles.mjs"
+      - "runtime/**"
+      - "styles/**/style.json"
       - ".github/workflows/presenter-runtime-sync.yml"
 
 jobs:
@@ -22,3 +32,4 @@ jobs:
         with:
           node-version: 20
       - run: node scripts/check-presenter-runtime-sync.mjs
+      - run: node scripts/build-presenter-runtime.mjs --check
