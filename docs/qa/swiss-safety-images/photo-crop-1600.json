@@ -1,0 +1,103 @@
+{
+  "rendered": true,
+  "safety": [
+    {
+      "index": 0,
+      "id": "image-evidence",
+      "layout": "S22",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 696.484375,
+      "safeBottom": 837,
+      "navGap": 179.515625,
+      "boxes": 14,
+      "issues": []
+    },
+    {
+      "index": 1,
+      "id": "image-photo",
+      "layout": "S22",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 696.484375,
+      "safeBottom": 837,
+      "navGap": 179.515625,
+      "boxes": 14,
+      "issues": []
+    }
+  ],
+  "images": [
+    {
+      "slide": 1,
+      "source": "images/registry-original.png",
+      "role": "evidence",
+      "loaded": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1000,
+      "width": 1600.012451171875,
+      "height": 540.004150390625,
+      "fit": "contain",
+      "position": "50% 50%",
+      "geometry": {
+        "scale": 0.540004150390625,
+        "left": 314.002490234375,
+        "top": 0,
+        "renderedWidth": 972.007470703125,
+        "renderedHeight": 540.004150390625,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 1800,
+          "bottom": 1000
+        },
+        "fullImage": true,
+        "subjectVisible": null
+      }
+    },
+    {
+      "slide": 2,
+      "source": "images/earthrise-original.jpg",
+      "role": "photo",
+      "loaded": true,
+      "naturalWidth": 3000,
+      "naturalHeight": 3000,
+      "width": 1600,
+      "height": 540,
+      "fit": "cover",
+      "position": "50% 0%",
+      "subject": [
+        0.48,
+        0.45,
+        0.18,
+        0.14
+      ],
+      "geometry": {
+        "scale": 0.5333333333333333,
+        "left": 0,
+        "top": 0,
+        "renderedWidth": 1600,
+        "renderedHeight": 1600,
+        "visible": {
+          "left": 0,
+          "top": 0,
+          "right": 3000,
+          "bottom": 1012.5
+        },
+        "fullImage": false,
+        "subjectVisible": false
+      }
+    }
+  ],
+  "browser": "155.0.8059.85",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "supplied local UMD",
+  "errors": [
+    "Slide 2: declared image subject is cropped: images/earthrise-original.jpg"
+  ],
+  "warnings": [],
+  "passed": false
+}

@@ -12,4 +12,8 @@
 
 Swiss 校验器只有找到 Playwright 时才做浏览器测量；必须检查其输出，不能把静态通过当成浏览器测量完成。
 
+需要实际测量时，使用`validate-swiss-deck.mjs <file> --require-browser --playwright-module <index.mjs> --chrome <binary>`；`--width/--height`设置视口，`--report <新文件>`保存结果。可用`--url`指向本地HTTP服务，但其HTML必须与被校验文件完全相同。完整复现、字体条件与反例见`docs/qa/swiss-safety-images.md`。
+
+Q06实测93vh及导航16px；Q07可用`data-image-role="evidence|photo|illustration"`声明图片角色，照片可补`data-subject-box="x,y,width,height"`（0–1归一化人工主体框）。检查器可识别object-fit导致的裁切和声明主体丢失，不自动判断所有遮挡或主体。仍需打开原素材和实际页面检查；素材来源与处理理由记录在PROJECT.md。
+
 六类代表页见 `examples/swiss-representative-review/index.html`，可用 `node scripts/build-swiss-representative-example.mjs <新目录>` 重建。它展示封面、长中文标题、四项正文、图片、流程与收尾，样张值和检查条件见其 PROJECT.md 与 `docs/qa/swiss-representative.md`；例内 CSS 不自动成为全局模板规则。

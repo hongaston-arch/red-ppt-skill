@@ -8,7 +8,7 @@ For a new chat, start with [CONTEXT.md](CONTEXT.md). The [confirmation workflow]
 
 ## Current scope
 
-The foundation registers `magazine` and `swiss`, adds scaffolding and validation, and provides S15 plus six representative Swiss pages. This dependent branch extracts [shared presenter source](docs/presenter-runtime.md) while preserving both preassembled templates byte for byte. Users need no build step. Ordinary navigation, general layout measurement, and a third style remain future work; this branch has not been released to stable main.
+The foundation registers `magazine` and `swiss`, with S15 and six representative Swiss pages. Shared presenter source is already available on the preceding branch. This dependent branch adds Swiss 93vh/navigation-clearance measurements and original-image checks, with two image review pages. Templates remain preassembled and unchanged. A third style is still a proposal; these draft branches have not been released to stable main.
 
 After this branch is reviewed and merged, install the stable main branch:
 

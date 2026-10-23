@@ -1,0 +1,47 @@
+{
+  "rendered": true,
+  "safety": [
+    {
+      "index": 0,
+      "id": "matrix-8",
+      "layout": "S15",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 856.609375,
+      "safeBottom": 837,
+      "navGap": 19.390625,
+      "boxes": 31,
+      "issues": [
+        "93vh exceeded: 856.61px > 837.00px"
+      ]
+    },
+    {
+      "index": 1,
+      "id": "matrix-12",
+      "layout": "S15",
+      "width": 1600,
+      "height": 900,
+      "contentBottom": 856.609375,
+      "safeBottom": 837,
+      "navGap": 19.390625,
+      "boxes": 43,
+      "issues": [
+        "93vh exceeded: 856.61px > 837.00px"
+      ]
+    }
+  ],
+  "images": [],
+  "browser": "155.0.8059.85",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "supplied local UMD",
+  "errors": [
+    "Slide 1 (S15): 93vh exceeded: 856.61px > 837.00px",
+    "Slide 2 (S15): 93vh exceeded: 856.61px > 837.00px"
+  ],
+  "warnings": [],
+  "passed": false
+}

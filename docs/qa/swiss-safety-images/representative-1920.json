@@ -1,0 +1,105 @@
+{
+  "rendered": true,
+  "safety": [
+    {
+      "index": 0,
+      "id": "review-cover",
+      "layout": "SWISS-COVER-ASCII",
+      "width": 1920,
+      "height": 1080,
+      "contentBottom": 980.515625,
+      "safeBottom": 1004.4000000000001,
+      "navGap": 71.890625,
+      "boxes": 8,
+      "issues": []
+    },
+    {
+      "index": 1,
+      "id": "review-long-title",
+      "layout": "S03",
+      "width": 1920,
+      "height": 1080,
+      "contentBottom": 980.515625,
+      "safeBottom": 1004.4000000000001,
+      "navGap": 71.890625,
+      "boxes": 12,
+      "issues": []
+    },
+    {
+      "index": 2,
+      "id": "review-body",
+      "layout": "S19",
+      "width": 1920,
+      "height": 1080,
+      "contentBottom": 980.515625,
+      "safeBottom": 1004.4000000000001,
+      "navGap": 71.890625,
+      "boxes": 24,
+      "issues": []
+    },
+    {
+      "index": 3,
+      "id": "review-image",
+      "layout": "S22",
+      "width": 1920,
+      "height": 1080,
+      "contentBottom": 859.890625,
+      "safeBottom": 1004.4000000000001,
+      "navGap": 192.515625,
+      "boxes": 17,
+      "issues": []
+    },
+    {
+      "index": 4,
+      "id": "review-process",
+      "layout": "S11",
+      "width": 1920,
+      "height": 1080,
+      "contentBottom": 980.515625,
+      "safeBottom": 1004.4000000000001,
+      "navGap": 71.890625,
+      "boxes": 16,
+      "issues": []
+    },
+    {
+      "index": 5,
+      "id": "review-closing",
+      "layout": "S10",
+      "width": 1920,
+      "height": 1080,
+      "contentBottom": 980.515625,
+      "safeBottom": 1004.4000000000001,
+      "navGap": 71.890625,
+      "boxes": 20,
+      "issues": []
+    }
+  ],
+  "images": [
+    {
+      "slide": 4,
+      "source": "images/structure-21x9.svg",
+      "role": "",
+      "loaded": true,
+      "naturalWidth": 2100,
+      "naturalHeight": 900,
+      "width": 1920,
+      "height": 648,
+      "fit": "contain",
+      "position": "50% 50%"
+    }
+  ],
+  "browser": "155.0.8059.85",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fontMode": "system fallback; Google Fonts blocked",
+  "lucideMode": "supplied local UMD",
+  "errors": [],
+  "warnings": [
+    "Slide 6 (S10): M2 h2 \"保留清晰的骨架\" has 15px gap before .review-body \"每页先确定信息角色，再选择登记版式。\" (min 32px).",
+    "Slide 6 (S10): M2 h2 \"展示实际的效果\" has 15px gap before .review-body \"使用代表页核对标题、正文、图片和流程。\" (min 32px).",
+    "Slide 6 (S10): M2 h2 \"留下可恢复的记录\" has 15px gap before .review-body \"确认范围与检查结果分别保存，方便下次继续。\" (min 32px)."
+  ],
+  "passed": true
+}
